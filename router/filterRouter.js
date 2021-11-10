@@ -39,7 +39,7 @@ router.post("/paging_filter", async (req, res) => {
 //page nhận lại page ở client truyền lên
 router.post("/:page", async (req, res) => {
   try {
-    let perPage = 3; // số lượng sản phẩm xuất hiện trên 1 page
+    let perPage = 6; // số lượng sản phẩm xuất hiện trên 1 page
     let page = req.params.page || 1;//nếu ko có params mặc định page la 1
     // lay type, min, max tu client
     const type = req.body.type;

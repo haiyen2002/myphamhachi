@@ -31,8 +31,8 @@
 .product-card_img img {
   display: block;
   width: 100%;
-  height: 250px;
-  object-fit: cover;
+  /* height: 250px;
+  object-fit: cover; */
   /* width: 100%; */
 }
 
