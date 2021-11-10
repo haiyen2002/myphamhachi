@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    background: #efefef;
+    .main-left {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      padding: 10px 40px;
+      background: linear-gradient(#ecf0f1 0%, #95a5a6 100%);
+      @media screen and (max-width: 888px) {
+        width: 100%;
+      }
+      .logo {
+        width: 100%;
+        a {
+          width: 100%;
+        }
+        h2 {
+          margin-top: 20px;
+          color: #3498db;
+          margin-bottom: 15px;
+        }
+      }
+      .user,
+      .pass {
+        width: 100%;
+        padding: 10px 20px;
+        margin-bottom: 15px;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        border: 1px solid #3498db;
+        letter-spacing: 2px;
+        font-size: 15px;
+        background: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 3px 5px rgba(41, 59, 68, 0.281);
+        &::placeholder {
+          letter-spacing: 2px;
+          font-size: 15px;
+        }
+      }
+  
+      .fullname {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        align-items: center;
+        .firstName,
+        .lastName {
+          width: 50%;
+          padding: 10px 20px;
+          margin-bottom: 15px;
+          border-radius: 20px;
+          outline: none;
+          border: none;
+          border: 1px solid #3498db;
+          letter-spacing: 2px;
+          font-size: 15px;
+          background: rgba(255, 255, 255, 0.5);
+          box-shadow: 0 3px 5px rgba(41, 59, 68, 0.281);
+          &::placeholder {
+            letter-spacing: 2px;
+            font-size: 15px;
+          }
+        }
+      }
+      .Phone {
+        width: 100%;
+        padding: 10px 20px;
+        margin-bottom: 15px;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        border: 1px solid #3498db;
+        letter-spacing: 2px;
+        font-size: 15px;
+        background: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 3px 5px rgba(41, 59, 68, 0.281);
+        &::placeholder {
+          letter-spacing: 2px;
+          font-size: 15px;
+        }
+      }
+      .Genner {
+        width: 80px;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 20px;
+        border: 1px solid #3498db;
+        letter-spacing: 2px;
+        font-size: 15px;
+        color: #777;
+        background: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 3px 5px rgba(41, 59, 68, 0.281);
+      }
+      .Email {
+        width: 100%;
+        padding: 10px 20px;
+        margin-bottom: 15px;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        border: 1px solid #3498db;
+        letter-spacing: 2px;
+        font-size: 15px;
+        background: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 3px 5px rgba(41, 59, 68, 0.281);
+        &::placeholder {
+          letter-spacing: 2px;
+          font-size: 15px;
+        }
+      }
+      label {
+        margin-bottom: 15px;
+        color: #777;
+        font-size: 15px;
+        letter-spacing: 2px;
+      }
+      .Birthday {
+        width: 100%;
+        padding: 10px 20px;
+        outline: none;
+        border: none;
+        border: 1px solid #3498db;
+        border-radius: 20px;
+        margin-bottom: 15px;
+        letter-spacing: 2px;
+        font-size: 15px;
+        background: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 3px 5px rgba(41, 59, 68, 0.281);
+      }
+      input[type="button"] {
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: none;
+        margin-bottom: 15px;
+        background: #3498db;
+        color: #fff;
+        letter-spacing: 2px;
+        font-size: 15px;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+        &:hover {
+          opacity: 0.8;
+          color: #fff;
+        }
+      }
+      .footer-end {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 5px;
+        p {
+          display: flex;
+  
+          .logo-team {
+            width: 20px;
+            height: 20px;
+          }
+          span {
+            font-weight: bold;
+          }
+        }
+        .go-home {
+          text-decoration: none;
+          color: #2980b9;
+        }
+      }
+    }
+    .main-center {
+      position: absolute;
+      top: -1%;
+      width: 5%;
+      bottom: 0;
+      margin-left: 38%;
+      background: #efefef;
+      background: linear-gradient(#ecf0f1 0%, #95a5a6 100%);
+      transform: rotateZ(3deg);
+      @media screen and (max-width: 888px) {
+        display: none;
+      }
+    }
+    .main-right {
+      width: 60%;
+      height: 100vh;
+      @media screen and (max-width: 888px) {
+        display: none;
+      }
+      .img-left {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }

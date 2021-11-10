@@ -1,0 +1,89 @@
+.modal_Status {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.modal_Status .modal_statusBox {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 250px;
+  background: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .modal_Status .modal_statusBox {
+    width: 80%;
+  }
+}
+
+.modal_Status .modal_statusBox .modalStatus_close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  font-size: 15px;
+}
+
+.modal_Status .modal_statusBox .header_modalStatus {
+  padding: 10px;
+  width: 100%;
+}
+
+.modal_Status .modal_statusBox .body_modalStatus {
+  width: 100%;
+}
+
+.modal_Status .modal_statusBox .body_modalStatus .select_Status {
+  width: 100%;
+  height: 30px;
+  outline: none;
+  font-size: 16px;
+}
+
+.modal_Status .modal_statusBox .footer_modalStatus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+}
+
+.modal_Status .modal_statusBox .footer_modalStatus .change_Status {
+  padding: 5px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background: #4cd137;
+  font-size: 14px;
+}
+
+.modal_Status .modal_statusBox .footer_modalStatus .not_change {
+  padding: 5px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background: #03a9f4;
+  font-size: 14px;
+}
+/*# sourceMappingURL=modal_Status.css.map */

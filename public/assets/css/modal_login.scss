@@ -1,0 +1,105 @@
+.modal-login {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.74);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 11;
+  
+    .close-login {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 32px;
+      color: #fff;
+      cursor: pointer;
+    }
+    .box-login {
+      width: 400px;
+      height: 300px;
+      display: flex;
+      padding: 20px;
+      background: rgba(241, 235, 235, 0.856);
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.74);
+      .form-login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        h2 {
+          text-align: center;
+          color: #006885;
+          margin-bottom: 16px;
+        }
+        .input_box{
+            position: relative;
+            width: 100%;
+            display: flex;
+            color: #006885;
+            .input_icon{
+                position: absolute;
+                top: 8px;
+            }
+            #user,
+            #pass {
+            width: 100%;
+            padding: 12px 25px;
+            margin-bottom: 16px;
+            outline: none;
+            border: none;
+            font-size: 15px;
+            letter-spacing: 2px;
+            color: #006885;
+            background: none;
+            border: none;
+            border-bottom: 1px solid #006885;  
+            &::placeholder {
+                color: #006885;
+            }
+            &:focus{
+                color: #006885;
+                border-bottom: 1px solid #e74c3c;
+            }
+        }
+        }
+        .on-regiser {
+          width: 100%;
+          text-align: center;
+          text-decoration: none;
+          margin-bottom: 16px;
+          color: #006885;
+          &:hover {
+            color: #4cd137;
+          }
+        }
+        .on-login {
+          width: 100%;
+          padding: 12px 20px;
+          margin-bottom: 16px;
+          border: none;
+          border: 1px solid #006885;
+          background: none;
+          color: #006885;
+          cursor: pointer;
+          font-size: 15px;
+          letter-spacing: 2px;
+          &:hover {
+            color:#4cd137;
+            border: 1px solid #4cd137;
+          }
+        }
+      }
+    }
+  }

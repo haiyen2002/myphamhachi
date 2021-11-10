@@ -1,0 +1,219 @@
+.details {
+  position: relative;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  padding: 20px;
+  padding-top: 0;
+  gap: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.details .rencentOrder {
+  position: relative;
+  min-height: 500px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 480px) {
+  .details .rencentOrder {
+    overflow-x: auto;
+  }
+}
+
+.details .rencentOrder .cardHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.details .rencentOrder .cardHeader h2 {
+  font-weight: bold;
+}
+
+.details .rencentOrder .cardHeader .btn {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(73, 138, 155, 0.6)), to(rgba(211, 85, 194, 0.6)));
+  background: linear-gradient(90deg, rgba(73, 138, 155, 0.6), rgba(211, 85, 194, 0.6));
+  color: #fff;
+  padding: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.details .rencentOrder table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .details .rencentOrder table {
+    width: 550px !important;
+  }
+}
+
+.details .rencentOrder table thead tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.details .rencentOrder table thead tr td {
+  font-weight: 600;
+  padding: 10px 5px;
+  font-size: 15px;
+}
+
+.details .rencentOrder table thead tr td:last-child {
+  text-align: right;
+}
+
+.details .rencentOrder table thead tr td:nth-child(2) {
+  text-align: right;
+}
+
+.details .rencentOrder table thead tr td:nth-child(3) {
+  text-align: right;
+}
+
+.details .rencentOrder table tbody tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.details .rencentOrder table tbody tr:hover {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(73, 138, 155, 0.6)), to(rgba(211, 85, 194, 0.6)));
+  background: linear-gradient(90deg, rgba(73, 138, 155, 0.6), rgba(211, 85, 194, 0.6));
+  color: #fff;
+}
+
+.details .rencentOrder table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.details .rencentOrder table tbody tr td {
+  padding: 10px 5px;
+  font-size: 15px;
+}
+
+.details .rencentOrder table tbody tr td:last-child {
+  text-align: right;
+}
+
+.details .rencentOrder table tbody tr td:nth-child(2) {
+  text-align: right;
+}
+
+.details .rencentOrder table tbody tr td:nth-child(3) {
+  text-align: right;
+}
+
+.details .rencentOrder table tbody tr td .status {
+  color: #fff;
+  font-weight: 300;
+  border-radius: 4px;
+  padding: 4px;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.details .rencentOrder table tbody tr td .compelete {
+  background: #4cd137;
+}
+
+.details .rencentOrder table tbody tr td .cancel {
+  background: #e74c3c;
+}
+
+.details .rencentOrder table tbody tr td .pending {
+  background: #f9ca3f;
+}
+
+.details .rencentOrder table tbody tr td .shipping {
+  background: #03a9f4;
+}
+
+.details .rencentCustomers {
+  min-height: 500px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.details .rencentCustomers .cardHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.details .rencentCustomers .cardHeader h2 {
+  font-weight: bold;
+}
+
+.details .rencentCustomers table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.details .rencentCustomers table tbody tr:hover {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(73, 138, 155, 0.6)), to(rgba(211, 85, 194, 0.6)));
+  background: linear-gradient(90deg, rgba(73, 138, 155, 0.6), rgba(211, 85, 194, 0.6));
+  color: #fff;
+}
+
+.details .rencentCustomers table tbody tr:hover h4,
+.details .rencentCustomers table tbody tr:hover span {
+  color: #fff;
+}
+
+.details .rencentCustomers table tbody tr td {
+  padding: 10px 5px;
+}
+
+.details .rencentCustomers table tbody tr td .img_members {
+  width: 40px;
+  height: 40px;
+}
+
+.details .rencentCustomers table tbody tr td .img_members .img_member {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.details .rencentCustomers table tbody tr td h4 {
+  color: #303030;
+  font-size: 14px;
+}
+
+.details .rencentCustomers table tbody tr td h4 span {
+  color: #777;
+  font-size: 12px;
+}
+/*# sourceMappingURL=admin_home.css.map */

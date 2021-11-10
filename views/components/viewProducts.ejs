@@ -1,0 +1,169 @@
+<div class="outter-wp">
+    <div class="sub-heard-part">
+        <ol class="breadcrumb m-b-0">
+
+            <div class="show_prds">
+                <div style="height : 680px; border: 1px solid rgb(0 0 0 / 10%); border-radius: 15px;padding: 15px;box-shadow: 5px;box-shadow: 0 5px 5px rgb(0 0 0 / 10%);"
+                    class="border-table">
+                    <table>
+                        <tr>
+                            <th>STT</th>
+                            <th>Name</th>
+                            <th>Image</th>
+                            <th>codeProduct</th>
+                            <th>price</th>
+                            <th>quantity</th>
+                            <th>prd_key</th>
+                            <th>descriptionDetails</th>
+                            <th>rate</th>
+                            <th></th>
+                        </tr>
+                        <% Showproduct.map((ele , index)=>{ %>
+                            <tr>
+                                <td>
+                                    <%= index%>
+                                </td>
+                                <td>
+                                    <%= ele.name.substring(0,30) +`...` %>
+                                </td>
+                                <td>
+                                    <div class="listImg" style="display:flex">
+                                        <% ele.img.map((eles , index2)=>{ %>
+                                            <img src="<%= eles %>" alt="" width="50" height="50">
+                                            <% }) %>
+                                    </div>
+                                </td>
+                                <td>
+                                    <%= ele.codeProduct %>
+                                </td>
+                                <td>
+                                    <%= ele.price.toLocaleString() +` VNĐ` %>
+                                </td>
+                                <td>
+                                    <%if(parseInt(ele.quantity)> 0){%>
+                                        <%= ele.quantity %>
+                                            <%}else{%>
+                                                <span style="color: red;">Hết hàng</span>
+                                                <% }%>
+
+                                </td>
+                                <td>
+                                    <%= ele.prd_key %>
+                                </td>
+
+                                <td>
+                                    <%= ele.descriptionDetails.substring(0,50) +`...` %>
+                                </td>
+                                <td>
+                                    <%= ele.rate %>
+                                </td>
+                                <td>
+                                    <div class="btnChange" style="display: flex;" id="<%= ele._id %>">
+                                        <a href="#demo-modal_<%= ele._id %>" id="open-button" class="btn_edit" style="background-color: transparent !important; border : none ; outline: none;
+                                    box-shadow: none;" title="Edit data"><i class="fa fa-edit"></i>
+                                        </a>
+                                        <a class="btn_edit" style="background-color: transparent !important; border : none ; outline: none;
+                                    box-shadow: none;" onclick="deleteProduct('<%= ele._id %>')" title="Delete User"><i
+                                                class="fa fa-minus-circle"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <% }) %>
+                    </table>
+                </div>
+            </div>
+        </ol>
+    </div>
+    <% Showproduct.map((ele , index)=>{ %>
+        <div class="modal_prds">
+            <div id="demo-modal_<%=ele._id%>" class="modal">
+                <div class="modal__content">
+                    <h1 style="text-align: center;color: darkred;">Edit Product</h1>
+                    <div style="height: 650px;overflow: scroll;overflow-x: hidden;" class="outter-wp">
+                        <div style="display : flex ;flex-direction: row;" class="sub-heard-part">
+                            <div class="container">
+                                <table cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td style="width: 15%;"><label for="fname">Name</label></td>
+                                        <td> <input type="text" id="fname_<%= ele._id %>" name="namePrd"
+                                                placeholder="Your name.." value="<%= ele.name %>">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 15%;"> <label for="lname">codeProduct</label></td>
+                                        <td> <input type="text" id="codeproduct_<%= ele._id %>" name="codeproduct"
+                                                placeholder="Your codeproduct.." value="  <%= ele.codeProduct %>"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 15%;"> <label for="country">price</label></td>
+                                        <td> <input type="text" id="price_<%= ele._id %>" name="price"
+                                                placeholder="Your price.." value="  <%= ele.price %>">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 15%;"> <label for="country">quantity</label></td>
+                                        <td> <input type="text" id="quantity_<%= ele._id %>" name="quantity"
+                                                placeholder="Your quantity.." value="<%= ele.quantity %>">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 15%;"> <label for="country">prd_key</label>
+                                        </td>
+                                        <td><input type="text" id="prd_key_<%= ele._id %>" name="descriptionDetails"
+                                                placeholder="Your descriptionDetails.." value="<%=  ele.prd_key %>">
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="width: 15%;">
+                                            <label for="country">rate</label>
+                                        </td>
+                                        <td>
+                                            <input type="text" id="rate_<%= ele._id %>" name="rate"
+                                                placeholder="Your rate.." value="  <%= ele.rate %>">
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 15%;"> <label for="prd_key">descriptionDetails</label>
+                                        </td>
+                                        <td> <textarea id="descriptionDetails_<%= ele._id %>" name="descriptionDetails"
+                                                placeholder="Write something.."
+                                                style="height:200px"><%= ele.descriptionDetails %></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 15%;">
+                                            <form class="listImg" id="form_<%= ele._id %>" action="/multiple-upload"
+                                                method="POST" enctype="multipart/form-data">
+                                                <p><input type="file" accept="image/*" name="image"
+                                                        id="file_<%= ele._id %>" onchange="loadFile(event)"
+                                                        style="display: none;" multiple>
+                                                </p>
+                                                <p><label for="file_<%= ele._id %>" style="cursor: pointer;">Upload
+                                                        Image</label>
+                                                </p>
+                                                <p style="display: flex; flex-direction: column;"
+                                                    class="showimge show_<%= ele._id %>">
+                                                </p>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </div>
+                        <button
+                            style="width: 100%; padding: 10px;background-color: chartreuse; border: none;outline: none;"
+                            onclick="editproduct('<%= ele._id %>')">Update</button>
+                        <a href="#" class="modal__close">&times;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+
+</div>

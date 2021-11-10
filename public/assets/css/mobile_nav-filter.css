@@ -1,0 +1,120 @@
+.mobile-item-filter {
+    display: block;
+}
+
+.modal-nav-mobile-filter {
+    display: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.nav-mobile-filter {
+    padding: 0;
+}
+
+.nav-mobile-search {
+    list-style: none;
+}
+
+.container-mobile-filter {
+    position: absolute;
+    height: 100%;
+    overflow: auto;
+    width: 35%;
+    background: #f8f8f8;
+    padding: 30px 20px;
+}
+
+.search-mobile-filter, .search-filter {
+    display: flex;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    padding: 0 .75em;
+    height: 2.507em;
+    font-size: .97em;
+    border-radius: 0;
+    max-width: 100%;
+    width: 100%;
+    vertical-align: middle;
+    background-color: #fff;
+    color: #333;
+    box-shadow: inset 0 1px 2px rgb(0 0 0 / 10%);
+    transition: color .3s, border .3s, background .3s, opacity .3s;
+    margin: 30px 0;
+}
+
+#search-mobile-input-filter, #search-input-filter {
+   border: none;
+   outline: none;
+   width: 80%;
+}
+
+.search-mobile-icon-filter, .search-icon-filter{
+   width: 20%;
+   display: inline-block;
+   text-align: center;
+   line-height: 32.2px;
+   color: white;
+    background: #006885;
+    cursor: pointer;
+}
+
+.mobile-box-filter {
+    margin: 25px 0;
+    background-color: #fff;
+    padding: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(10, 10, 10, 0.1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(10, 10, 10, 0.1);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(10, 10, 10, 0.1);
+}
+
+.modal-mobile-filter {
+    position: relative;
+    height: 100%;
+}
+
+.mobile-item-filter h4 {
+    padding: 6px;
+    color: #fff;
+    background-color: #006885;
+    display: block;
+}
+
+.mobile-item-filter .filter-item {
+    background-color: #fafafa;
+    margin: 12px 5px;
+}
+
+.mobile-item-filter .filter-item input, 
+.mobile-item-filter .filter-item label {
+    padding: 2px 20px;
+}
+
+.modal-nav-mobile-filter .modal-mobile-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.modal-nav-mobile-filter .modal-mobile-close .btn-mobile-close {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    font-size: 32px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-mobile-close {
+    color: #006885 !important;
+}

@@ -1,0 +1,287 @@
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td,
+    th {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+    }
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -60px;
+
+        /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+        opacity: 0;
+        transition: opacity 1s;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .btnChange a {
+        margin-left: 10px;
+    }
+
+    .wrapper {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: -webkit-linear-gradient(to right, #834d9b, #d04ed6);
+        background: linear-gradient(to right, #834d9b, #d04ed6);
+    }
+
+    .wrapper a {
+        display: inline-block;
+        text-decoration: none;
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 3px;
+        text-transform: uppercase;
+        color: #585858;
+        font-family: "Roboto", sans-serif;
+    }
+
+    .modal {
+        visibility: hidden;
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(77, 77, 77, 0.7);
+        transition: all 0.4s;
+    }
+
+    .modal:target {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .modal__content {
+        border-radius: 4px;
+        position: relative;
+        width: 500px;
+        max-width: 90%;
+        background: #fff;
+        padding: 1em 2em;
+    }
+
+    .modal__footer {
+        text-align: right;
+
+    }
+
+    .modal__footer a {
+        color: #585858;
+    }
+
+    .modal__footer i {
+        color: #d02d2c;
+    }
+
+    .modal__close {
+        background-color: white !important;
+        width: 20px;
+        text-align: center;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #585858;
+        text-decoration: none;
+    }
+
+
+
+    table,
+    tr,
+    td {
+        border: none;
+    }
+</style>
+
+<div class="mess_tb">
+
+</div>
+<div class="page-container">
+    <div class="left-content">
+        <div class="inner-content">
+            <h1 style="text-align: center; color: rgba(255, 60, 0, 0.918);margin-bottom: 30px;">List
+                Products </h1>
+            <div class="dataset">
+                <div class="btn_classify_prd">
+                    <label> Loại sản phẩm</label>
+                    <select style="width: 200px;margin-left: 30px;" name="data_prd" id="classify_prd"
+                        onchange="changevalue()">
+                        <option value="1">Tất cả</option>
+                        <!-- <option value="2">Chăm sóc da</option>
+                        <option value="3">Chăm sóc tóc</option> -->
+                    </select>
+                </div>
+                <div class="seach_prd">
+                    <input type="text" placeholder="Search.." id="ipn_search" name="search" onkeyup="searchPrd()">
+                </div>
+                <% Showproduct.map((ele , index)=>{ %>
+                    <div id="demo-modal_<%=ele._id%>" class="modal">
+                        <div class="modal__content">
+                            <h1 style="text-align: center; margin-bottom: 40px;color: darkred;">Edit Product</h1>
+                            <div class="outter-wp">
+                                <div style="display : flex ;flex-direction: row;" class="sub-heard-part">
+                                    <div class="container">
+                                        <table cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td><label for="fname">Name</label></td>
+                                                <td> <input type="text" id="fname_<%= ele._id %>" name="namePrd"
+                                                        placeholder="Your name.." value="<%= ele.name %>">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td> <label for="lname">codeProduct</label></td>
+                                                <td> <input type="text" id="codeproduct_<%= ele._id %>"
+                                                        name="codeproduct" placeholder="Your codeproduct.."
+                                                        value="  <%= ele.codeProduct %>"></td>
+                                            </tr>
+                                            <tr>
+                                                <td> <label for="country">price</label></td>
+                                                <td> <input type="text" id="price_<%= ele._id %>" name="price"
+                                                        placeholder="Your price.." value="  <%= ele.price %>">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td> <label for="country">quantity</label></td>
+                                                <td> <input type="text" id="quantity_<%= ele._id %>" name="quantity"
+                                                        placeholder="Your quantity.." value="<%= ele.quantity %>">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td> <label for="country">prd_key</label></td>
+                                                <td><input type="text" id="prd_key_<%= ele._id %>"
+                                                        name="descriptionDetails"
+                                                        placeholder="Your descriptionDetails.."
+                                                        value="<%= ele.prd_key %>"></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <label for="country">rate</label>
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="rate_<%= ele._id %>" name="rate"
+                                                        placeholder="Your rate.." value="  <%= ele.rate %>">
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td> <label for="prd_key">descriptionDetails</label></td>
+                                                <td> <textarea id="descriptionDetails_<%= ele._id %>" name="prd_key"
+                                                        placeholder="Write something.."
+                                                        style="height:200px"><%= ele.descriptionDetails %></textarea>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <form class="listImg" id="form_<%= ele._id %>"
+                                                        action="/multiple-upload" method="POST"
+                                                        enctype="multipart/form-data">
+                                                        <p><input type="file" accept="image/*" name="image"
+                                                                id="file_<%= ele._id %>" onchange="loadFile(event)"
+                                                                style="display: none;" multiple>
+                                                        </p>
+                                                        <p><label for="file_<%= ele._id %>"
+                                                                style="cursor: pointer;">Upload
+                                                                Image</label>
+                                                        </p>
+                                                        <p style="display: flex; flex-direction: column;"
+                                                            class="showimge show_<%= ele._id %>">
+                                                        </p>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                    </div>
+                                </div>
+                                <button
+                                    style="width: 100%; padding: 10px;background-color: chartreuse; border: none;outline: none;"
+                                    onclick="editproduct('<%= ele._id %>')">Update</button>
+                                <a href="#" class="modal__close">&times;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %>
+                        <footer>
+                            <p>@ Project Team k14-Nodemy</p>
+                        </footer>
+            </div>
+            <div class="showPrds">
+                <%- include('../Components/viewProducts.ejs'); -%>
+            </div>
+            <div class="list" style="position: relative;">
+                <div style="text-align: center;position: fixed; bottom: 50px;width: 100%;height: 60px;"
+                    class="pageList">
+                </div>
+
+            </div>
+        </div>
+        <%- include('../Components/menuadmin'); -%>
+    </div>
+
+    <script>
+        var toggle = true;
+
+        $(".sidebar-icon").click(function () {
+            if (toggle) {
+                $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+                $("#menu span").css({ "position": "absolute" });
+            }
+            else {
+                $(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+                setTimeout(function () {
+                    $("#menu span").css({ "position": "relative" });
+                }, 400);
+            }
+
+            toggle = !toggle;
+        });
+    </script>
+    <script>
+
+        var loadFile = function (event) {
+            var image = $('.showimge');
+            for (let i = 0; i < event.target.files.length; i++) {
+                image.append(`<img class="imgfocus" src="${URL.createObjectURL(event.target.files[i])}" alt="" height="75px" style="margin-left:10px ; margin-bottom: 5px;">`);
+            }
+        };
+
+
+
+    </script>
+    <script src="../../public/assets/js/Adminedit.js"></script>

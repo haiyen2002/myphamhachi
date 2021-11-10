@@ -1,0 +1,31 @@
+<div class="search-overlay">
+    <div class="search-overlay-close">
+        <i class="far fa-times-circle"></i>
+    </div>
+    <div class="select-overlay-top">
+        <div class="select-types">
+            <select class="select-box">
+                <option value="">All</option>
+                <% var distinct=[] %>
+                    <% types.forEach(type=> { %>
+                        <% distinct.push(type.split(",")[0]) %>
+                            <% }) %>
+                                <% var uniques=distinct.map(item=> item) .filter((value, index, self) =>
+                                    self.indexOf(value) === index) %>
+                                    %>
+                                    <% uniques.forEach(type=> { %>
+                                        <option value='<%= type.split(",")[0] %>' class="list-option">
+                                            <%= type.split(",")[0] %>
+                                        </option>
+                                        <% }) %>
+            </select>
+        </div>
+        <div class="input-groups">
+            <input id="input_search" autocomplete="off" type="text" placeholder="Tìm kiếm">
+            <span><i class="fas fa-search"></i></span>
+        </div>
+    </div>
+    <div style="width: 596px; display: flex; justify-content: flex-end;">
+        <div class="select-overlay-bottom"></div>
+    </div>
+</div>

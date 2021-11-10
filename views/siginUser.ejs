@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regiser</title>
+    <link
+    rel="shortcut icon"
+    href="//theme.hstatic.net/1000353126/1000735393/14/favicon.png?v=13"
+    type="image/png"
+    />
+    <link rel="stylesheet" href="/public/assets/css/siginUser.css">
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <div class="header">
+                <h1>Đăng ký</h1>
+            </div>
+            <div class="form-inputs">
+                <div class="form-input">
+                    <label for="firstName">FirstName</label>
+                    <input type="text" autocomplete="off" name="firstName" id="firstName" placeholder="FirstName">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form-input">
+                    <label for="lastName">LastName</label>
+                    <input type="text" autocomplete="off" name="lastName" id="lastName" placeholder="LastName">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form-input">
+                    <label for="username">Tên Đăng nhập</label>
+                    <input type="text" autocomplete="off" name="username" id="username" placeholder="Username">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form-input">
+                    <label for="email">Email</label>
+                    <input type="text" autocomplete="off" name="email" id="email" placeholder="Email">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form-input">
+                    <label for="phone">Phone</label>
+                    <input type="text" autocomplete="off" name="phone" id="phone" placeholder="Phone">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form-input">
+                    <label for="birthday">Birthday</label>
+                    <input type="date" autocomplete="off" name="birthday" id="birthday">
+                </div>
+                <div class="form-input">
+                    <label for="password">Password</label>
+                    <input type="password" name="" id="password" placeholder="Password">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form-input">
+                    <label for="comfirm">Comfirm</label>
+                    <input type="password" name="" id="comfirm" placeholder="Comfirm">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form-input">
+                    <input type="button" name="" id="" value="Đăng ký" onclick="regiser()">
+                    <span class="form-message-error"></span>
+                </div>
+                <div class="form-input">
+                    <input type="button" class="go-home" name="" id="" value="Về trang chủ" onclick="gohome()">
+                </div>
+            </div>
+            
+        </form>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" ></script>
+<script src="/public/assets/js/checkvalidate.js"></script>
+<script src="/public/assets/js/regiser.js"></script>
+</html>

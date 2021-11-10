@@ -1,0 +1,90 @@
+
+    <style>
+        .body {
+          width: 100%;
+          height: 500px !important;
+          display: flex;
+          padding: 40px 20px;
+          justify-content: center;
+          gap: 40px;
+        }
+        .body-item1 {
+          width: 45%;
+          height: 100%;
+          animation: hieuung1 1s ease-in-out 1;
+        }
+        @keyframes hieuung1 {
+          0% {
+            transform: translateX(-100%);
+            opacity: 0;
+          }
+          80% {
+            transform: translateX(10%);
+            opacity: 1;
+          }
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+        .body-item2 {
+          width: 45%;
+          height: 100%;
+          animation: hieuung2 1s ease-in-out 1;
+        }
+        @keyframes hieuung2 {
+          0% {
+            transform: translateX(100%);
+            opacity: 0;
+          }
+          80% {
+            transform: translateX(-10%);
+            opacity: 1;
+          }
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+        .body-item:hover {
+          opacity: 0.8;
+        }
+      </style>
+  
+  
+      <div class="body">
+        <div class="body-item1">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.1343648540255!2d105.80373681424456!3d20.987250394571532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aceaa17d1be3%3A0xdf1cc6def05b7fbb!2zMjE0IMSQxrDhu51uZyBOZ3V54buFbiBYaeG7g24sIEjhuqEgxJDDrG5oLCBUaGFuaCBYdcOibiwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1633513614035!5m2!1svi!2s"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+        <div class="body-item2">
+          <img
+            style="width: 100%; margin-bottom: 32px"
+            src="/public/images/logo-mona-01.png"
+            alt=""
+          />
+          <ul style="margin-left: 20px">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <a href="#">214 Nguyễn Xiển, Thanh Xuân, Tp.Hà Nội</a>
+            </li>
+            <li>
+              <i class="fas fa-phone-square-alt"></i>
+              <a href="#">1900 666 888</a>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="#">
+                nodemy@gmail.com
+                <span>nodemy@mona.media</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>

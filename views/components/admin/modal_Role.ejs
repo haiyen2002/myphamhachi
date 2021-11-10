@@ -1,0 +1,24 @@
+<% user.forEach(ele => { %>
+
+<div class="modal_Role" id="modal_Role_<%= ele._id%>">
+    <div class="modal_roleBox">
+        <div class="modalRole_close">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="header_modalRole">
+            <h4>Change Role</h4>
+        </div>
+        <div class="body_modalRole">
+            <select class="select_Role" name="" id="select_Role_<%= ele._id %>">
+                <option value="user">user</option>
+                <option value="admin">admin</option>
+            </select>
+        </div>
+        <div class="footer_modalRole">
+            <button class="change_Role" onclick="RoleUpdate()">Save</button>
+            <button class="not_change" onclick="OffmodalRole()">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<% })%>

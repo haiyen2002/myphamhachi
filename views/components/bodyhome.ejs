@@ -1,0 +1,283 @@
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td,
+    th {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .btnChange a {
+        margin-left: 10px;
+    }
+
+    .wrapper {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: -webkit-linear-gradient(to right, #834d9b, #d04ed6);
+        background: linear-gradient(to right, #834d9b, #d04ed6);
+    }
+
+    .wrapper a {
+        display: inline-block;
+        text-decoration: none;
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 3px;
+        text-transform: uppercase;
+        color: #585858;
+        font-family: "Roboto", sans-serif;
+    }
+
+    .modal {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(77, 77, 77, 0.7);
+        transition: all 0.4s;
+    }
+
+    .modal:target {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .modal__content {
+        border-radius: 4px;
+        position: relative;
+        width: 500px;
+        max-width: 90%;
+        background: #fff;
+        padding: 1em 2em;
+    }
+
+    .modal__footer {
+        text-align: right;
+
+    }
+
+    .modal__footer a {
+        color: #585858;
+    }
+
+    .modal__footer i {
+        color: #d02d2c;
+    }
+
+    .modal__close {
+        background-color: white !important;
+        width: 20px;
+        text-align: center;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #585858;
+        text-decoration: none;
+    }
+
+    .page-container {
+        position: absolute;
+    }
+
+    .border-table {
+        border: 1px solid rgb(0 0 0 / 10%);
+        border-radius: 15px;
+        padding: 15px;
+        box-shadow: 5px;
+        box-shadow: 0 5px 5px rgb(0 0 0 / 10%);
+        height: 680px;
+    }
+
+    ._1MmTVs {
+        padding: 12px 0;
+        margin: 12px 0;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 1px 1px 0 rgb(0 0 0 / 5%);
+        color: #212121;
+        background: #eaeaea;
+        border-radius: 10px;
+    }
+
+    ._1MmTVs>input {
+        flex: 1;
+        font-size: 14px;
+        line-height: 16px;
+        border: 0;
+        outline: none;
+        background-color: inherit;
+    }
+
+    ._1MmTVs>svg {
+        margin: 0 15px;
+        stroke: #bbb;
+    }
+</style>
+
+<div class="page-container">
+    <div class="mess_tb">
+
+    </div>
+    <div class="left-content">
+        <div class="inner-content">
+            <div class="outter-wp">
+                <div class="sub-heard-part">
+                    <ol class="breadcrumb m-b-0">
+                        <h1 style="text-align: center; color: rgba(255, 60, 0, 0.918);margin-bottom: 30px;">List User
+                            Account </h1>
+                        <div class="_1MmTVs"><svg width="19px" height="19px" viewBox="0 0 19 19">
+                                <g id="Search-New" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="my-purchase-copy-27" transform="translate(-399.000000, -221.000000)"
+                                        stroke-width="2">
+                                        <g id="Group-32" transform="translate(400.000000, 222.000000)">
+                                            <circle id="Oval-27" cx="7" cy="7" r="7"></circle>
+                                            <path d="M12,12 L16.9799555,16.919354" id="Path-184" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg><input autocomplete="off" placeholder="Tìm kiếm theo username" onchange="seachUser()"
+                                value=""></div>
+                        <div class="border-table">
+
+                            <table>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Username</th>
+                                    <th>Password</th>
+                                    <th>Firstname</th>
+                                    <th>Lastname</th>
+                                    <th>Phone</th>
+                                    <th>Gender</th>
+                                    <th>Email</th>
+                                    <th>Birthday</th>
+                                    <th>Role</th>
+                                    <th>Date created</th>
+                                    <th>#</th>
+                                </tr>
+                                <% showUser.map((ele , index)=>{ %>
+                                    <tr>
+                                        <td>
+                                            <%= index%>
+                                        </td>
+                                        <td>
+                                            <%= ele.username %>
+                                        </td>
+                                        <td>*******</td>
+                                        <td>
+                                            <%= ele.firstname %>
+                                        </td>
+                                        <td>
+                                            <%= ele.lastname %>
+                                        </td>
+                                        <td>
+                                            <%= ele.phone %>
+                                        </td>
+                                        <td>
+                                            <%= ele.gender %>
+                                        </td>
+                                        <td>
+                                            <%= ele.email %>
+                                        </td>
+                                        <td>
+                                            <%= ele.birthday %>
+                                        </td>
+                                        <td>
+                                            <%= ele.role %>
+                                        </td>
+                                        <td>
+                                            <%= ele.createdAt.toLocaleDateString() %>
+                                        </td>
+                                        <td>
+                                            <div class="btnChange" style="display: flex;">
+
+                                                <a href="#demo-modal_<%= ele._id %>" id="open-button" class="btn_edit"
+                                                    style="background-color: transparent !important; border : none ; outline: none;
+                                                box-shadow: none;" title="Edit data"><i class="fa fa-edit"></i>
+                                                </a>
+                                                <!--  window.open("https://www.geeksforgeeks.org", "_blank"); -->
+                                                <!-- <a href="#demo-modal_2_<%= ele._id %>" id="open-button" class="btn_edit"
+                                                style="background-color: transparent !important; border : none ;  outline: none;
+                                                box-shadow: none;" title="History orders"><i
+                                                    class="fa fa-shopping-cart"></i>
+                                            </a> -->
+                                                <a onclick="ShowOrdersUser('<%= ele._id %>')" id="open-button"
+                                                    class="btn_edit" style="background-color: transparent !important; border : none ;  outline: none;
+                                                box-shadow: none;" title="History orders"><i
+                                                        class="fa fa-shopping-cart"></i>
+                                                </a>
+                                                <a class="btn_edit" style="background-color: transparent !important; border : none ; outline: none;
+                                                box-shadow: none;" onclick="deleteUser('<%= ele._id %>')"
+                                                    title="Delete User"><i class="fa fa-minus-circle"></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <% }) %>
+                            </table>
+                        </div>
+                    </ol>
+                </div>
+            </div>
+            <% showUser.map((ele , index)=>{ %>
+                <div id="demo-modal_<%= ele._id %>" class="modal">
+                    <div class="modal__content">
+                        <h1 style="text-align: center; color: darkred;">Edit Role User</h1>
+                        <div>
+                            <label for="" style="margin-right:10px">Role </label>
+                            <select id="role">
+                                <option value="1">admin</option>
+                                <option value="2">user</option>
+                            </select>
+                            <button class="save" onclick="Update_Role('<%= ele._id %>')">Update</button>
+                        </div>
+                        <a href="#" class="modal__close">&times;</a>
+                    </div>
+                </div>
+                <div class="list" style="position: relative;">
+                    <div style="text-align: center;position: fixed; bottom: 50px;width: 100%;height: 60px;"
+                        class="pageList_user">
+                    </div>
+                </div>
+                <% }) %>
+                    <footer>
+                        <p>@ Project Team k14-Nodemy</p>
+                    </footer>
+        </div>
+    </div>
+    <%- include('../Components/menuadmin'); -%>
+</div>
+
+<script>
+    var toggle = true;
+
+    $(".sidebar-icon").click(function () {
+        if (toggle) {
+            $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+            $("#menu span").css({ "position": "absolute" });
+        }
+        else {
+            $(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+            setTimeout(function () {
+                $("#menu span").css({ "position": "relative" });
+            }, 400);
+        }
+
+        toggle = !toggle;
+    });
+
+</script>

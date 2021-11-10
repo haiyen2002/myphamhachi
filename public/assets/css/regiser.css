@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #efefef;
+}
+
+body .main-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%;
+  padding: 10px 40px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ecf0f1), to(#95a5a6));
+  background: linear-gradient(#ecf0f1 0%, #95a5a6 100%);
+}
+
+@media screen and (max-width: 888px) {
+  body .main-left {
+    width: 100%;
+  }
+}
+
+body .main-left .logo {
+  width: 100%;
+}
+
+body .main-left .logo a {
+  width: 100%;
+}
+
+body .main-left .logo h2 {
+  margin-top: 20px;
+  color: #3498db;
+  margin-bottom: 15px;
+}
+
+body .main-left .user,
+body .main-left .pass {
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  border: 1px solid #3498db;
+  letter-spacing: 2px;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0 3px 5px rgba(41, 59, 68, 0.281);
+          box-shadow: 0 3px 5px rgba(41, 59, 68, 0.281);
+}
+
+body .main-left .user::-webkit-input-placeholder,
+body .main-left .pass::-webkit-input-placeholder {
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+body .main-left .user:-ms-input-placeholder,
+body .main-left .pass:-ms-input-placeholder {
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+body .main-left .user::-ms-input-placeholder,
+body .main-left .pass::-ms-input-placeholder {
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+body .main-left .user::placeholder,
+body .main-left .pass::placeholder {
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+body .main-left .fullname {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main-left .fullname .firstName,
+body .main-left .fullname .lastName {
+  width: 50%;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  border: 1px solid #3498db;
+  letter-spacing: 2px;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0 3px 5px rgba(41, 59, 68, 0.281);
+          box-shadow: 0 3px 5px rgba(41, 59, 68, 0.281);
+}
+
+body .main-left .fullname .firstName::-webkit-input-placeholder,
+body .main-left .fullname .lastName::-webkit-input-placeholder {
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+body .main-left .fullname .firstName:-ms-input-placeholder,
+body .main-left .fullname .lastName:-ms-input-placeholder {
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+body .main-left .fullname .firstName::-ms-input-placeholder,
+body .main-left .fullname .lastName::-ms-input-placeholder {
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+body .main-left .fullname .firstName::placeholder,
+body .main-left .fullname .lastName::placeholder {
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+body .main-left .Phone {
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  border: 1px solid #3498db;
+  letter-spacing: 2px;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0 3px 5px rgba(41, 59, 68, 0.281);
+          box-shadow: 0 3px 5px rgba(41, 59, 68, 0.281);
+}
+
+body .main-left .Phone::-webkit-input-placeholder {
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+body .main-left .Phone:-ms-input-placeholder {
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+body .main-left .Phone::-ms-input-placeholder {
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+body .main-left .Phone::placeholder {
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+body .main-left .Genner {
+  width: 80px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 20px;
+  border: 1px solid #3498db;
+  letter-spacing: 2px;
+  font-size: 15px;
+  color: #777;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0 3px 5px rgba(41, 59, 68, 0.281);
+          box-shadow: 0 3px 5px rgba(41, 59, 68, 0.281);
+}
+
+body .main-left .Email {
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  border: 1px solid #3498db;
+  letter-spacing: 2px;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0 3px 5px rgba(41, 59, 68, 0.281);
+          box-shadow: 0 3px 5px rgba(41, 59, 68, 0.281);
+}
+
+body .main-left .Email::-webkit-input-placeholder {
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+body .main-left .Email:-ms-input-placeholder {
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+body .main-left .Email::-ms-input-placeholder {
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+body .main-left .Email::placeholder {
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+body .main-left label {
+  margin-bottom: 15px;
+  color: #777;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+body .main-left .Birthday {
+  width: 100%;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  border: 1px solid #3498db;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0 3px 5px rgba(41, 59, 68, 0.281);
+          box-shadow: 0 3px 5px rgba(41, 59, 68, 0.281);
+}
+
+body .main-left input[type="button"] {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  margin-bottom: 15px;
+  background: #3498db;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 15px;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+body .main-left input[type="button"]:hover {
+  opacity: 0.8;
+  color: #fff;
+}
+
+body .main-left .footer-end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+body .main-left .footer-end p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .main-left .footer-end p .logo-team {
+  width: 20px;
+  height: 20px;
+}
+
+body .main-left .footer-end p span {
+  font-weight: bold;
+}
+
+body .main-left .footer-end .go-home {
+  text-decoration: none;
+  color: #2980b9;
+}
+
+body .main-center {
+  position: absolute;
+  top: -1%;
+  width: 5%;
+  bottom: 0;
+  margin-left: 38%;
+  background: #efefef;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ecf0f1), to(#95a5a6));
+  background: linear-gradient(#ecf0f1 0%, #95a5a6 100%);
+  -webkit-transform: rotateZ(3deg);
+          transform: rotateZ(3deg);
+}
+
+@media screen and (max-width: 888px) {
+  body .main-center {
+    display: none;
+  }
+}
+
+body .main-right {
+  width: 60%;
+  height: 100vh;
+}
+
+@media screen and (max-width: 888px) {
+  body .main-right {
+    display: none;
+  }
+}
+
+body .main-right .img-left {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/*# sourceMappingURL=regiser.css.map */

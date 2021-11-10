@@ -1,0 +1,121 @@
+.productDetail-content {
+    padding-left: 40px;
+}
+
+.prd-detail-name p{
+    color: #006885;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+}
+
+.prd-detail-img.active {
+    display: block;
+}
+
+.productDetail-content-components div{
+    margin: 10px 0;
+}
+
+.share-prd-social {
+
+}
+
+.share-prd-social span {
+    display: inline-block;
+    padding: 0px 5px;
+}
+
+.share-prd-social span i{
+    font-size: 20px;
+}
+
+.tiktok{
+   color: blueviolet;
+  }
+
+.prd-detail-price.product-card_price {
+    color: #006885;
+    text-align: left;
+}
+
+.product-card_quantity.prd-detail-quantity {
+    text-align: left;
+    color: #006885;
+}
+
+.prd-detail-img {
+    display: none;
+}
+
+.container-product-left-img__img.border-img {
+    border: 1px solid #006885;
+}
+
+.form-input-group {
+    display: flex;
+    border: 1px #ddd solid;
+    width: 120px;
+}
+
+.form-input input[type=button] {
+    padding: 2 7px;
+    font-size: 26px;
+    line-height: 0.5;
+    vertical-align: middle;
+    display: inline-block;
+    padding: 6px;
+    border: none;
+    color: #b3b3b3;
+    background: none;
+}
+
+.form-input input[type=button]:first-child{
+    border-right: 1px solid #b3b3b3;
+}
+
+.form-input input[type=button]:last-child {
+    border-left: 1px solid #b3b3b3;
+}
+
+.form-input input[type=number] {
+    display: inline-block;
+    border: none;
+    text-align: center;
+    outline: none;
+    color: #b3b3b3;
+}
+
+.prd-detail-add-gotoPay {
+    padding: 8px;
+    border: none;
+    background: #006885;
+    color: #fff;
+}
+
+.productDetail-content-contact p {
+    color: #006885;
+}
+
+.productDetail-content-contact p:nth-child(4),.productDetail-content-contact p:last-child{
+    font-weight: bold;
+}
+
+.productDetail-content-contact p:nth-child(4) i,.productDetail-content-contact p:last-child i{
+color: #006885;
+}
+
+.productDetail-content-contact p:nth-child(2){
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+/* .img-prd-0 {
+    display: block;
+} */
+
+.prd-detail-name.prd-card-detail_title {
+  
+}
+

@@ -1,0 +1,133 @@
+<div class="products-filter__container">
+  <div class="filter-mobile-head">
+    <div class="filter-head__nav">
+      <a href="/">TRANG CHỦ</a>
+      <span>/</span>
+      <span>CỬA HÀNG</span>
+    </div>
+    <div class="filter-head__box">
+      <i style="font-size: 25px;" class="fas fa-filter"></i>
+      </div>
+    </div>
+  </div>
+  <div class="filter-row">
+    <div class="filter-col filter-col-2-4 ">
+      <div class="filter-col-container">
+        <div class="nav-filter-search">
+          <div class="search-filter">
+            <input
+              id="search-input-filter"
+              type="text"
+              placeholder="Tìm kiếm"
+            />
+            <span class="search-icon-filter">
+              <i class="fas fa-search"></i>
+            </span>
+          </div>
+        </div>
+        <div class="nav-filter-box">
+          <div class="nav-filter-left">
+          <div class="box-filter-left">
+            <h4 class="title">Thể loại</h4>
+            <form action="">
+              <div class="filter-item">
+                <input
+                  type="radio"
+                  name="category"
+                  id="all"
+                  value=""
+                  class="filter-checkbox"
+                  checked
+                />
+                <label for="">All</label>
+              </div>
+              <% var distinct=[] %> <% types.forEach(type=> { %> <%
+              distinct.push(type.split(",")[0]) %> <% }) %> <% var
+              uniques=distinct.map(item=> item).filter((value, index, self) =>
+              self.indexOf(value) === index) %> <% uniques.forEach(unique => { %>
+              <div class="filter-item">
+                <input
+                  type="radio"
+                  name="category"
+                  id=""
+                  value="<%= unique %>"
+                  class="filter-checkbox"
+                />
+                <label for=""><%= unique %></label>
+              </div>
+              <% }) %>
+            </form>
+          </div>
+          <div class="box-filter-left">
+            <h4 class="title">Giá</h4>
+            <div class="price-filter">
+              <div class="filter-item">
+                <input
+                  type="radio"
+                  min="0"
+                  max="99999"
+                  name="price"
+                  id="vl1"
+                  class="price-checkbox"
+                />
+                <label for="vl1">Dưới 100.000</label>
+              </div>
+              <div class="filter-item">
+                <input
+                  type="radio"
+                  min="100000"
+                  max="499999"
+                  name="price"
+                  id="vl2"
+                  class="price-checkbox"
+                />
+                <label for="vl2">Từ 100.000 đến 500.000</label>
+              </div>
+              <div class="filter-item">
+                <input
+                  type="radio"
+                  min="500000"
+                  max="999999"
+                  name="price"
+                  id="vl3"
+                  class="price-checkbox"
+                />
+                <label for="vl3">Từ 500.000 đến 1.000.000</label>
+              </div>
+              <div class="filter-item">
+                <input
+                  type="radio"
+                  min="1000000"
+                  max="9999999"
+                  name="price"
+                  id=""
+                  class="price-checkbox"
+                />
+                <label for="">Trên 1.000.000</label>
+              </div>
+            </div>
+            </div>
+          <div class="box-filter-left">
+            <h4 class="title">Thương hiệu</h4>
+            <div class="filter-item">
+              <input type="checkbox" name="" id="" />
+              <label for="">HACHI</label>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      
+    </div>
+    <div class="filter-col filter-col-9-6">
+      <div class="product-filter__heading">
+        <h1>Danh Sách Sản Phẩm</h1>
+      </div>
+      <div class="filter-row filter-product-results"></div>
+      <div class="row box-btnPage"></div>
+     
+    </div>
+  </div>
+</div>
+

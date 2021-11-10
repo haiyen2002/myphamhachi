@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link
+    rel="shortcut icon"
+    href="//theme.hstatic.net/1000353126/1000735393/14/favicon.png?v=13"
+    type="image/png"
+    />
+    <link rel="stylesheet" href="/public/assets/css/admin_login.css">
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <div class="header">
+                <h1>Login Admin</h1>
+            </div>
+            <div class="form-input">
+                <label for="username">Username</label>
+                <input type="text" autocomplete="off" name="" id="username" placeholder="Username">
+                <span class="form-message"></span>
+            </div>
+            <div class="form-input">
+                <label for="password">Password</label>
+                <input type="password" name="" id="password" placeholder="Password">
+                <span class="form-message"></span>
+            </div>
+            <div class="form-input">
+                <input type="button" name="" id="" value="Login" onclick="loginAdmin()">
+                <span class="form-message-error"></span>
+            </div>
+        </form>
+    </div>
+</body>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+crossorigin="anonymous"
+referrerpolicy="no-referrer"
+></script>
+<!-- <script src="/public/assets/js/admin_login_logout.js"></script> -->
+<script>
+    async function loginAdmin(){
+    try {
+        const user = document.querySelector("#username")
+        const pass =   document.querySelector("#password")
+        checkblur(user)
+        checkblur(pass)
+        checkValue(user)
+        checkValue(pass)
+
+        if( checkValue(user) == 100 && checkValue(pass) == 100){
+            const data = await $.ajax({
+                url: "/admin/dangnhap",
+                type: "POST",
+                data: {
+                    username:user.value,
+                    password: pass.value
+                }
+            })
+            if(data.status == 200){
+                setCookie("user", data.id, 30);
+                alert(data.mess)
+                window.location.href = "/admin/home"
+            }else if(data.status == 400){
+                $(".form-message-error").html("")
+                $(".form-message-error").append(`${data.mess}`)
+            }
+        }
+        
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+    let expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+
+  function checkValue(item){
+        let itemValue = item.value
+      if(itemValue.trim() == ""){
+        item.parentElement.querySelector(".form-message").innerHTML = ""
+        item.parentElement.querySelector(".form-message").innerHTML = "Vui lòng nhập trường này"
+
+      }else{
+          return 100
+      }
+  }
+  function checkblur(item){
+    item.addEventListener("keyup", ()=>{
+        item.parentElement.querySelector(".form-message").innerHTML = ""
+    })
+  }
+
+  $.ajax({
+        url: "/user/checkLogin",
+        type: "POST",
+        headers: {},
+      })
+        .then((data) => {
+          if (data.status === 200) {
+            window.location.href = "/admin/home";
+            // alert(data.mess);
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+</script>
+</html>

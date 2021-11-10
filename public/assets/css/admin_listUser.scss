@@ -1,0 +1,246 @@
+.details {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 0;
+  @media screen and (max-width: 768px) {
+    display: grid;
+    grid-column: auto;
+  }
+
+  .rencentOrder {
+    position: relative;
+    min-height: 500px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #eee;
+    }
+    @media screen and (max-width: 768px) {
+      overflow-x: auto;
+    }
+    .cardHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      h2 {
+        font-weight: bold;
+      }
+      .btn {
+        background: linear-gradient(90deg, rgba(36, 44, 129, 0.6), rgba(224, 108, 209, 0.6) );
+        color: #fff;
+        padding: 5px;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 10px;
+      @media screen and (max-width: 768px) {
+        width: 600px;
+      }
+      thead {
+        tr {
+          td {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            font-weight: 600;
+            padding: 10px 5px;
+            font-size: 13px;
+            &:last-child {
+              text-align: right;
+            }
+            &:nth-child(2) {
+              text-align: left;
+            }
+            &:nth-child(3) {
+              text-align: left;
+              @media screen and (max-width: 992px) {
+                display: none;
+              }
+            }
+            &:nth-child(4) {
+              text-align: left;
+              @media screen and (max-width: 992px) {
+                display: none;
+              }
+            }
+            &:nth-child(5) {
+              text-align: right;
+            }
+            &:nth-child(6) {
+              text-align: right;
+              text-align: right;
+              @media screen and (max-width: 992px) {
+                display: none;
+              }
+            }
+            &:nth-child(7) {
+              text-align: right;
+              @media screen and (max-width: 992px) {
+                display: none;
+              }
+            }
+            &:nth-child(8) {
+              text-align: right;
+              @media screen and (max-width: 992px) {
+                display: none;
+              }
+            }
+            &:nth-child(9) {
+              text-align: right;
+              @media screen and (max-width: 992px) {
+                display: none;
+              }
+            }
+            &:nth-child(10) {
+              text-align: right;
+            }
+            &:nth-child(11) {
+              text-align: right;
+            }
+            &:nth-child(12) {
+              text-align: right;
+            }
+          }
+        }
+      }
+      tbody {
+        tr {
+          &:hover {
+            background: linear-gradient(90deg, rgba(36, 44, 129, 0.6), rgba(224, 108, 209, 0.6) );
+            color: #fff;
+          }
+          &:last-child {
+            border-bottom: none;
+          }
+          td {
+            padding: 10px 5px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            font-size: 13px;
+            white-space: pre-line;
+            &:last-child {
+              text-align: right;
+            }
+            &:nth-child(2) {
+              text-align: left;
+            }
+            &:nth-child(3) {
+              text-align: left;
+              @media screen and (max-width: 992px) {
+                display: none;
+              }
+            }
+            &:nth-child(4) {
+              text-align: left;
+              @media screen and (max-width: 992px) {
+                display: none;
+              }
+            }
+            &:nth-child(5) {
+              text-align: right;
+            }
+            &:nth-child(6) {
+              text-align: right;
+              @media screen and (max-width: 992px) {
+                display: none;
+              }
+            }
+            &:nth-child(7) {
+              text-align: right;
+              @media screen and (max-width: 992px) {
+                display: none;
+              }
+            }
+            &:nth-child(8) {
+              text-align: right;
+              @media screen and (max-width: 992px) {
+                display: none;
+              }
+            }
+            &:nth-child(9) {
+              text-align: right;
+              @media screen and (max-width: 992px) {
+                display: none;
+              }
+            }
+            &:nth-child(10) {
+              text-align: right;
+            }
+            &:nth-child(11) {
+              text-align: right;
+            }
+            &:nth-child(12) {
+              text-align: right;
+            }
+            .btn_user {
+              background: #f9ca3f;
+              color: #fff;
+              border: none;
+              padding: 5px 10px;
+              cursor: pointer;
+              text-decoration: none;
+              border-radius: 4px;
+            }
+            .btn_delete {
+              background: #e74c3c;
+              color: #fff;
+              border: none;
+              padding: 5px 10px;
+              cursor: pointer;
+              text-decoration: none;
+              border-radius: 4px;
+            }
+            .btn_role {
+              background: #4cd137;
+              color: #fff;
+              border: none;
+              padding: 5px 10px;
+              cursor: pointer;
+              text-decoration: none;
+              border-radius: 4px;
+            }
+            .btn_order {
+                background: #03a9f4;
+                color: #fff;
+                border: none;
+                padding: 5px 10px;
+                cursor: pointer;
+                text-decoration: none;
+                border-radius: 4px;
+              }
+          }
+        }
+      }
+    }
+  }
+}
+.listBtn {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  //   position: fixed;
+  //   gap: 10px;
+  //   bottom: 10px;
+  //   left: 50%;
+  //   transform: translate(-50%, 0);
+  button {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(90deg, rgba(36, 44, 129, 0.6), rgba(224, 108, 209, 0.6) );
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+}

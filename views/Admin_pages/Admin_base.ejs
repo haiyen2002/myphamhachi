@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- head -->
+    <%- include('../components/admin/head.ejs') %>
+
+    <% if( content == 'Dashboard' ){ %>
+        <link rel="stylesheet" href="/public/assets/css/admin_home.css" />
+    <% } %>
+
+    <% if( content == 'ListProduct' ){ %>
+        <link rel="stylesheet" href="/public/assets/css/admin_listProduct.css" />
+        <link rel="stylesheet" href="/public/assets/css/modal_Delete.css">
+        <link rel="stylesheet" href="/public/assets/css/modal_FixProduct.css">
+        <script src="/ckeditor/ckeditor.js"></script>
+    <% } %>
+
+    <% if( content == 'Customers' ){ %>
+        <link rel="stylesheet" href="/public/assets/css/admin_listUser.css" />
+        <link rel="stylesheet" href="/public/assets/css/modal_Delete.css">
+        <link rel="stylesheet" href="/public/assets/css/modal_Role.css">
+        <link rel="stylesheet" href="/public/assets/css/modal_viewUser.css">
+    <% } %>
+
+    
+    <% if( content == 'addProduct' ){ %>
+
+        <link rel="stylesheet" href="/public/assets/css/admin_addProduct.css">
+        <script src="/ckeditor/ckeditor.js"></script>
+
+
+    <% } %>
+
+    <% if( content == 'ListOrder' ){ %>
+
+        <link rel="stylesheet" href="/public/assets/css/admin_listOrder.css">
+        <link rel="stylesheet" href="/public/assets/css/modal_Status.css">
+        <link rel="stylesheet" href="/public/assets/css/modal_viewOrder.css">
+
+    <% } %>
+
+    <% if( content == 'changeProfile' || content == 'changePass' ){ %>
+
+        <link rel="stylesheet" href="/public/assets/css/admin_changeProfile.css">
+
+    <% } %>
+
+    <% if( content == 'Addnews' ){ %>
+        <link rel="stylesheet" href="/public/assets/css/admin_news.css">
+        <script src="/ckeditor/ckeditor.js"></script>
+    <% } %>
+
+    <% if( content == 'listNews' ){ %>
+       <link rel="stylesheet" href="/public/assets/css/admin_listNews.css">
+       <link rel="stylesheet" href="/public/assets/css/modal_Delete.css">
+       <link rel="stylesheet" href="/public/assets/css/modal_fixNews.css">
+       <script src="/ckeditor/ckeditor.js"></script>
+    <% } %>
+
+    <% if( content == 'userOrderDetail' ){ %>
+        <link rel="stylesheet" href="/public/assets/css/admin_userOrderDetail.css">
+        <link rel="stylesheet" href="/public/assets/css/modal_viewOrder.css">
+     <% } %>
+
+
+  </head>
+  <body>
+    <div class="container">
+      <!-- navigation -->
+      <%- include('../components/admin/navigation.ejs') %>
+      <div class="main">
+        <!-- topbar -->
+        <%- include('../components/admin/topbar.ejs') %>
+        <!-- cardBox -->
+        <%- include('../components/admin/cardBox.ejs') %>
+
+        <% if( content == 'Dashboard' ){ %>
+            <!-- details -->
+            <%- include('../Admin_pages/Dashboard.ejs') %>
+ 
+        <% } %>
+
+        <% if( content == 'ListProduct' ){ %>
+            <!-- details -->
+            <%- include('../Admin_pages/ListProduct.ejs') %>
+            <%- include('../components/admin/modal_Delete') %>
+            <%- include('../components/admin/modal_FixProduct') %>
+            <div class="listBtn">
+          
+            </div>
+        <% } %>
+
+        <% if( content == 'Customers' ){ %>
+            <!-- details -->
+            <%- include('../Admin_pages/Customers') %>
+            <%- include('../components/admin/modal_Role') %>
+            <%- include('../components/admin/modal_DeleteUser') %>
+            <%- include('../components/admin/modal_viewUser') %>
+ 
+
+            <div class="listBtn">
+          
+            </div>
+        <% } %>
+
+        <% if( content == 'addProduct' ){ %>
+            <!-- details -->
+            <%- include('../Admin_pages/addProduct.ejs') %>
+ 
+        <% } %>
+
+        <% if( content == 'ListOrder' ){ %>
+            <!-- details -->
+            <%- include('../Admin_pages/ListOrder') %>
+            <%- include('../components/admin/modal_Status') %>
+            <%- include('../components/admin/modal_viewOrder') %>
+
+            <div class="listBtn">
+          
+            </div>
+ 
+        <% } %>
+
+        <% if( content == 'changeProfile' ){ %>
+            <%- include('../Admin_pages/changeProfile') %>
+        <% } %>
+
+
+        <% if( content == 'changePass' ){ %>
+            <%- include('../Admin_pages/changePass') %>
+        <% } %>
+
+        <% if( content == 'Addnews' ){ %>
+            <%- include('../Admin_pages/newsPost.ejs') %>
+        <% } %>
+
+        <% if( content == 'listNews' ){ %>
+            <%- include('../Admin_pages/listNews.ejs') %>
+            <%- include('../components/admin/modal_DeleteNews.ejs') %>
+            <%- include('../components/admin/modal_FixNews.ejs') %>
+
+        <% } %>
+
+        <% if( content == 'userOrderDetail' ){ %>
+            <%- include('../Admin_pages/userOrderDetail.ejs') %>
+            <%- include('../components/admin/modal_orderDetail.ejs') %>
+         <% } %>
+  
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="/public/assets/js/formadmin.js"></script>
+  <script src="/public/assets/js/admin_login_logout.js"></script>
+
+    <% if( content == 'ListProduct' ){ %>
+
+    <script src="/public/assets/js/admin_fixProduct.js"></script>
+    <script src="/public/assets/js/admin_deleteProduct.js"></script>
+    <script src="/public/assets/js/admin_pavigationProduct.js"></script>
+
+     <!-- <script src="/public/assets/js/admin_addproduct.js"></script> -->
+
+    <% } %>
+
+    <% if( content == 'addProduct' ){ %>
+
+     <script src="/public/assets/js/admin_addproduct.js"></script>
+
+    <% } %>
+
+    <% if( content == 'Customers' ){ %>
+
+    <script src="/public/assets/js/admin_Role.js"></script>
+    <script src="/public/assets/js/admin_pavigationUser.js"></script>
+    <script src="/public/assets/js/admin_deleteUser.js"></script>
+    <script src="/public/assets/js/admin_viewUser.js"></script>
+
+    <% } %>
+
+    <% if( content == 'ListOrder' ){ %>
+
+        <script src="/public/assets/js/admin_pavigationOrder.js"></script>
+        <script src="/public/assets/js/admin_Status.js"></script>
+        <script src="/public/assets/js/admin_viewOrder.js"></script>
+    
+    <% } %>
+
+    <% if( content == 'changeProfile' ){ %>
+
+        <script src="/public/assets/js/admin_changeProfile.js"></script>
+    
+    <% } %>
+
+    <% if( content == 'changePass' ){ %>
+
+        <script src="/public/assets/js/admin_changePass.js"></script>
+    
+    <% } %>
+
+    <% if( content == 'Addnews' ){ %>
+        <script src="/public/assets/js/admin_addNews.js"></script>
+    <% } %>
+
+    <% if( content == 'listNews' ){ %>
+        <script src="/public/assets/js/admin_deleteNews.js"></script>
+        <script src="/public/assets/js/admin_fixNews.js"></script>
+    <% } %>
+
+    <% if( content == 'userOrderDetail' ){ %>
+        <script src="/public/assets/js/admin_viewOrderDetail.js"></script>
+     <% } %>
+
+
+
+
+</html>

@@ -1,0 +1,17 @@
+<% news.forEach(ele => { %>
+
+    <div class="modal_delete" id="modal_delete_<%= ele._id %>">
+        <div class="box_modal">
+            <div class="modal_close"><i class="fas fa-times"></i></div>
+            <div class="modal_header"><h3>Xóa</h3></div>
+            <div class="modal_body">
+                <p>Bạn có chắc chắn muốn xóa không</p>
+            </div>
+            <div class="modal_footer">
+                <button class="comfirm_delete" onclick="comfirmDeleteNews()">Ok</button>
+                <button class="not_delete" onclick="OffmodalDelete()">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+<% })%>

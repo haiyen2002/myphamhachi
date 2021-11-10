@@ -1,0 +1,218 @@
+.modal_fixProduct {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+@media screen and (max-width: 768px) {
+  .modal_fixProduct {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow-y: scroll;
+    position: relative;
+  }
+}
+
+.modal_fixProduct .box_modalFix {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 800px;
+  max-height: 100vh;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .modal_fixProduct .box_modalFix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+  }
+}
+
+.modal_fixProduct .box_modalFix .close_modalFix {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  text-align: center;
+}
+
+.modal_fixProduct .box_modalFix .header_modalFix {
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal_fixProduct .box_modalFix .body_modalFix {
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.modal_fixProduct .box_modalFix .body_modalFix .form_FixProduct {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .modal_fixProduct .box_modalFix .body_modalFix .form_FixProduct {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow-y: scroll;
+  }
+}
+
+.modal_fixProduct .box_modalFix .body_modalFix .form_FixProduct .form-upload {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal_fixProduct .box_modalFix .body_modalFix .form_FixProduct .form-upload .form-img {
+  width: 100%;
+}
+
+.modal_fixProduct .box_modalFix .body_modalFix .form_FixProduct .form-upload .form-img .img_preview {
+  width: 100px !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.modal_fixProduct .box_modalFix .body_modalFix .form_FixProduct .form-upload .label_upload {
+  background: #03a9f4;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.modal_fixProduct .box_modalFix .body_modalFix .form_FixProduct .form-upload #img_product {
+  display: none;
+}
+
+.modal_fixProduct .box_modalFix .body_modalFix .form_FixProduct .form-items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .modal_fixProduct .box_modalFix .body_modalFix .form_FixProduct .form-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.modal_fixProduct .box_modalFix .body_modalFix .form_FixProduct .form-items .form-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal_fixProduct .box_modalFix .body_modalFix .form_FixProduct .form-items .form-item .form-label {
+  margin-bottom: 10px;
+}
+
+.modal_fixProduct .box_modalFix .body_modalFix .form_FixProduct .form-items .form-item input {
+  padding: 10px 15px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #777;
+  background: #f8f9fa;
+  font-size: 14px;
+}
+
+.modal_fixProduct .box_modalFix .body_modalFix .form_FixProduct .form-items .form-item #descriptionDetails {
+  width: 100% !important;
+  border-radius: 10px;
+  padding: 10px 15px;
+  outline: none;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+.modal_fixProduct .box_modalFix .footer_modalFix {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  gap: 10px;
+}
+
+.modal_fixProduct .box_modalFix .footer_modalFix .comfirm_Fix,
+.modal_fixProduct .box_modalFix .footer_modalFix .not_Fix {
+  width: 80px;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.modal_fixProduct .box_modalFix .footer_modalFix .comfirm_Fix {
+  background: #4cd137;
+}
+
+.modal_fixProduct .box_modalFix .footer_modalFix .not_Fix {
+  background: #03a9f4;
+}
+/*# sourceMappingURL=modal_FixProduct.css.map */

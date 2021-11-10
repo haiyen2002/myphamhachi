@@ -1,0 +1,23 @@
+<% user.forEach(ele=>{ %>
+
+    <div class="modal_viewUser" id="modal_viewUser_<%= ele._id %>">
+        <div class="box_viewUser">
+            <div class="close_view">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="container_view">
+               
+                <div class="img_view">
+                    <img src="<%= ele.avatar %>" alt="">
+                </div>
+               <h3><%= ele.firstname %> <%= ele.lastname %></h3>
+               <p class="view_mail"><i class="fas fa-at"></i> <%= ele.email %></p>
+               <p class="view_usename"><i class="fas fa-user"></i> username: <%= ele.username %></p>
+               <p class="view_birth"><i class="fas fa-birthday-cake"></i> <%= ele.birthday  %></p>
+               <p class="view_phone"><i class="fas fa-phone-square"></i> <%= ele.phone %></p>
+    
+            </div>
+        </div>
+    </div>
+
+<% }) %>

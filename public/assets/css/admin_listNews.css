@@ -1,0 +1,147 @@
+.details {
+  position: relative;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  padding: 20px;
+  padding-top: 0;
+  gap: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .details {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+}
+
+.details .rencentOrder {
+  position: relative;
+  min-height: 500px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .details .rencentOrder {
+    overflow-x: auto;
+  }
+}
+
+.details .rencentOrder .cardHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.details .rencentOrder .cardHeader h2 {
+  font-weight: bold;
+}
+
+.details .rencentOrder .cardHeader .btn {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(36, 44, 129, 0.6)), to(rgba(224, 108, 209, 0.6)));
+  background: linear-gradient(90deg, rgba(36, 44, 129, 0.6), rgba(224, 108, 209, 0.6));
+  color: #fff;
+  padding: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.details .rencentOrder table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .details .rencentOrder table {
+    width: 800px !important;
+  }
+}
+
+.details .rencentOrder table thead tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.details .rencentOrder table thead tr td {
+  font-weight: 600;
+  padding: 10px 5px;
+  font-size: 16px;
+}
+
+.details .rencentOrder table thead tr td:last-child {
+  text-align: right;
+}
+
+.details .rencentOrder table thead tr td:nth-child(2) {
+  text-align: left;
+}
+
+.details .rencentOrder table thead tr td:nth-child(3) {
+  text-align: left;
+}
+
+.details .rencentOrder table tbody tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.details .rencentOrder table tbody tr:hover {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(36, 44, 129, 0.6)), to(rgba(224, 108, 209, 0.6)));
+  background: linear-gradient(90deg, rgba(36, 44, 129, 0.6), rgba(224, 108, 209, 0.6));
+  color: #fff;
+}
+
+.details .rencentOrder table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.details .rencentOrder table tbody tr td {
+  padding: 10px 5px;
+  font-size: 16px;
+}
+
+.details .rencentOrder table tbody tr td:last-child {
+  text-align: right;
+}
+
+.details .rencentOrder table tbody tr td:nth-child(2) {
+  text-align: left;
+}
+
+.details .rencentOrder table tbody tr td:nth-child(3) {
+  text-align: left;
+}
+
+.details .rencentOrder table tbody tr td .btn_fix {
+  background: #f9ca3f;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.details .rencentOrder table tbody tr td .btn_delete {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 4px;
+}
+/*# sourceMappingURL=admin_listNews.css.map */

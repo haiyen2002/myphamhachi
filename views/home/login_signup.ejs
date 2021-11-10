@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../public/assets/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="font-awesome/css/font-awesome.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="../../public/assets/js/jquery-1.10.2.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <style>
+    body {
+      background: #f1f1f1;
+      background-image: url("../../public/assets/img/login-bg.jpg");
+      background-size: cover;
+      /* background-position: left; */
+    }
+  </style>
+  <body>
+    <div class="input-group pb-modalreglog-input-group btn_sign_log">
+      <a  href="#" style="margin-right: 20px"  class="pb-modalreglog-submit"  data-toggle="modal"  data-target="#myModal" >Đăng Nhập
+      </a>
+      <a  href="#"  class="pb-modalreglog-submit"  data-toggle="modal" data-target="#myModal2" >Đăng Kí
+      </a>
+    </div>
+    <div  class="modal fade"  id="myModal"  tabindex="-1"  role="dialog"  aria-labelledby="myModalLabel"  aria-hidden="true" data-backdrop="false">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button  type="button"  class="close"  data-dismiss="modal"  aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4  style="text-align: center; font-size: 25px; color: #006885"  class="modal-title"  id="myModalLabel">
+              Đăng Nhập
+            </h4>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="email">Tài Khoản</label>
+              <div class="input-group pb-modalreglog-input-group">
+                <input  type="email"  class="form-control"  id="email"  placeholder="Email hoặc số điện thoại"/>
+                <span class="input-group-addon" >
+                    <span class="glyphicon glyphicon-user"></span>
+                </span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password">Mật Khẩu</label>
+              <div class="input-group pb-modalreglog-input-group">
+                <input  type="password"  class="form-control"  id="pws"  placeholder="Mật Khẩu" />
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-lock"></span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button  type="button" class="btn btn-secondary"  onclick="clickout()"  data-dismiss="modal" >
+              Thoát
+            </button>
+            <button  type="button"  class="btn btn-primary loginbtn"  onclick="login()" style="background-color: #006885; border: #006885" >
+              Đăng Nhập
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div  class="modal fade"  id="myModal2"  tabindex="-1"  role="dialog"   aria-labelledby="myModalLabel"  aria-hidden="true" data-backdrop="false" >
+      <div class="modal-dialog modal-sm" role="document">
+        <div style="width: 500px" class="modal-content">
+          <div class="modal-header">
+            <button type="button"  class="close"  data-dismiss="modal"  aria-label="Close" >
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4  style="text-align: center; font-size: 25px; color: #006885" class="modal-title"  id="myModalLabel">
+              Đăng Kí
+            </h4>
+          </div>
+
+          <div class="modal-body">
+            <div class="form-group">
+              <div id="pb-modalreglog-progressbar"></div>
+            </div>
+            <div class="form-group">
+              <label for="lastname">Họ</label>
+              <div class="input-group pb-modalreglog-input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                <input  type="lastname"  class="form-control"  id="lastname"  placeholder="Họ"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="Firtname">Tên</label>
+              <div class="input-group pb-modalreglog-input-group">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-user"></span>
+                </span>
+                <input type="Firtname"  class="form-control"  id="Firtname" placeholder="Tên"/>
+              </div>
+            </div>
+            <div class="form-group ipn_email">
+              <label for="email">Email hoặc số điện thoại</label>
+              <div class="input-group pb-modalreglog-input-group">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-user"></span>
+                </span>
+                <input  type="email" class="form-control" id="inputEmail"  placeholder="Email hoặc số điện thoại" onchange="checkuser()"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password">Mật khẩu</label>
+              <div class="input-group pb-modalreglog-input-group">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-lock"></span>
+                </span>
+                <input  type="password" class="form-control" id="inputPws" placeholder="Mật khẩu"  required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="confirmpassword">Nhập lại mật khẩu</label>
+              <div class="input-group pb-modalreglog-input-group">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-lock"></span>
+                </span>
+                <input type="password" class="form-control"  id="inputConfirmPws" placeholder="Nhập lại mật khẩu" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label style="margin-right: 30px" for="sex">Giới tính</label>
+              <input type="radio" class="gt" name="sex" id="01" value="nam" />Nam
+              <input style="margin-left: 30px" type="radio" class="gt" name="sex" id="02" value="nữ"/>Nữ
+            </div>
+            <div class="form-group">
+              <label style="margin-right: 30px" for="birthday">Ngày sinh nhật</label>
+
+              <input type="date" name="birthday" id="birthday" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button" class="btn btn-secondary" onclick="clickout()" data-dismiss="modal" >
+              Thoát
+            </button>
+            <button type="button" class="btn btn-primary signupbtn"  onclick="sigup()" style="background-color: #006885; border: #006885" >
+              Đăng kí
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="../../public/assets/js/bootstrap.min.js"></script>
+  <script src="../../public/assets/js/signin-login.js"></script>
+  <script src="/public/assets/js/changrprofile.js"></script>
+  <script src="/public/assets/js/backtoCart.js"></script>
+  <script>
+    (() => {
+      $(".btn_sign_log").hide();
+      if (window.location.href.includes("login")) {
+        $(".pb-modalreglog-submit")[0].click();
+      }
+      if (window.location.href.includes("sigin")) {
+        $(".pb-modalreglog-submit")[1].click();
+      }
+    })();
+    function clickout() {
+      window.location.href = "/";
+    }
+  </script>
+</html>

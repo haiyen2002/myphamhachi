@@ -1,0 +1,41 @@
+<div class="details">
+    <div class="container_detail">
+         <div class="content-detail">
+             <h2>News Post</h2>
+         </div>
+         <form id="form-addNews" method="POST" action="" enctype="multipart/form-data">
+             <div class="form-items">
+                 <div class="form-item">
+                     <label for="imgNews">imgNews</label>
+                     <input type="file" id="imgNews" multiple name="imgNews" >
+                 </div>
+                 <div class="form-item">
+                     <label for="title">Title</label>
+                     <input type="text" id="title" name="title" >
+                     <span class="form-message"></span>
+                 </div>                 
+                 <div class="form-item">
+                     <label for="content">Content</label>
+                     <input type="text" id="content" name="content" >
+                     <span class="form-message"></span>
+                 </div>                 
+             </div>
+             <div class="des">
+                <label for="description">Detail</label>
+                <textarea name="description" id="editor" cols="30" rows="10"></textarea>  
+                
+               <script>
+                   // Replace the <textarea id="editor1"> with a CKEditor 4
+                   // instance, using default configuration.
+                   CKEDITOR.replace( 'editor' );
+               </script>   
+            </div>
+            
+         </form>
+         <div class="btns_add" id="btns_add">
+            <button class="btn_add" onclick="news()" >add</button>
+            <span class="form-message-error"></span>
+       </div>
+        
+    </div>
+ </div>

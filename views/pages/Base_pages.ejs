@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../components/head.ejs') %>
+
+
+    <% if(content == 'cart'){ %>
+        
+        <link rel="stylesheet" href="/public/assets/css/mainCart.css" />
+    <% } %>
+
+    <% if(content == 'order'){ %>
+        
+        <link rel="stylesheet" href="/public/assets/css/mainOrder.css" />
+
+    <% } %>
+
+    <% if(content == 'prd_detail'){ %>
+      <link rel="stylesheet" href="/public/assets/css/prd-content.css" />
+      <link rel="stylesheet" href="/public/assets/css/product_detail.css" />    
+      <link rel="stylesheet" href="/public/assets/css/zoomImage.css">
+      
+      <% } %>
+      
+      <% if(content == 'myOrder'){ %>
+        
+        <link rel="stylesheet" href="/public/assets/css/myOrder.css" />
+        <link rel="stylesheet" href="/public/assets/css/modal_viewOrder.css">
+
+        <% } %>
+
+      <% if(content == 'profile'){ %>
+        
+        <link rel="stylesheet" href="/public/assets/css/profile.css" />
+
+        <% } %>
+
+      <% if(content == 'changeProfileUser'){ %>
+        
+        <link rel="stylesheet" href="/public/assets/css/changeProfileUser.css" />
+
+        <% } %>
+
+      <% if(content == 'changePassUser'){ %>
+        
+        <link rel="stylesheet" href="/public/assets/css/changeProfileUser.css" />
+
+        <% } %>
+        
+    <% if(content == 'news'){ %>
+
+        <link rel="stylesheet" href="/public/assets/css/news.css">
+        
+    <% } %>
+    <% if(content == 'newsDetail'){ %>
+
+        <link rel="stylesheet" href="/public/assets/css/newsDetail.css">
+        
+    <% } %>
+        
+        <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/164071/drift-basic.css">
+
+  </head>
+  <body>
+    <!-- Modal-search -->
+    <%- include('../components/search_overlay.ejs') %>
+
+    <!-- Modal-nav-mobile -->
+    <%- include('../components/modal_nav-mobile.ejs') %>
+
+    <!-- HEADER -->
+    <%- include('../components/header.ejs') %>
+
+    <!-- **************************** -->
+    <% if(content == 'cart'){ %>
+
+        <%- include('./Cart') %>
+        
+    <% } %>
+
+    <% if(content == 'order'){ %>
+
+        <%- include('./Order') %>
+        
+    <% } %>
+
+    <% if(content == 'prd_detail'){ %>
+
+        <%- include('./product_Detail') %>
+        
+    <% } %>
+
+
+    <% if(content == 'myOrder'){ %>
+
+        <%- include('./myOrder') %>
+        <%- include('../components/modal_myOrder.ejs') %>
+        
+    <% } %>
+
+    <% if(content == 'profile'){ %>
+
+        <%- include('./profile') %>
+        
+    <% } %>
+    <% if(content == 'changeProfileUser'){ %>
+
+        <%- include('./changeProfileUser.ejs') %>
+        
+    <% } %>
+    <% if(content == 'changePassUser'){ %>
+
+        <%- include('./changPassUser.ejs') %>
+        
+    <% } %>
+
+    <% if(content == 'about_us'){ %>
+
+        <%- include('./about_us') %>
+        
+    <% } %>
+
+    <% if(content == 'contact'){ %>
+
+        <%- include('./contact') %>
+        
+    <% } %>
+
+
+    <% if(content == 'store'){ %>
+
+        <%- include('./store') %>
+        
+    <% } %>
+
+    <% if(content == 'slogan'){ %>
+
+        <%- include('./slogan') %>
+        
+    <% } %>
+
+    <% if(content == 'news'){ %>
+
+        <%- include('./news.ejs') %>
+        
+    <% } %>
+    
+    <% if(content == 'newsDetail'){ %>
+        
+        <%- include('./newsDetail.ejs') %>
+        
+    <% } %>
+
+    <!-- -------------------------- -->
+
+    <!-- FOOTER -->
+    <%- include('../components/footer.ejs') %>
+  </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+  <script src="/public/assets/js/form_page.js"></script>
+  <script src="/public/assets/js/cart_localStorage.js"></script>
+  <script src="/public/assets/js/product_detail.js"></script>
+  <script src="/public/assets/js/signin-login.js"></script>
+  <script src="/public/assets/js/search-product.js"></script>   
+
+     <% if(content == 'cart' || content == 'order'){ %>        
+     <script>
+    $(".container-cart").css("display", "none");
+    </script>
+    
+    <% } %>
+
+    <% if( content == 'order'){ %>       
+        <script src="/public/assets/js/order.js"></script>
+    <% } %>
+
+   <% if(content == 'prd_detail' ){ %>
+        
+    <script>
+        //SHOW-CHILDREN-ITEM-NAV-MOBILE -1
+        const more = document.querySelectorAll(".more-item")
+        const more_link = document.querySelectorAll(".more-item-click")
+        const chid = document.querySelectorAll(".show_children")
+        for (let i = 0; i < more.length; i++) {
+            more[i].addEventListener("click", ()=>{
+                chid[i].style.display = 'block';
+                more[i].style.display = 'none';
+                more_link[i].style.display = 'block';
+            })
+            more_link[i].addEventListener("click", ()=>{
+                chid[i].style.display = 'none';
+                more[i].style.display = 'block';
+                more_link[i].style.display = 'none';
+            })
+            
+        }
+
+        $(".owl-carousel").owlCarousel({
+        margin: 10,
+        slideBy: 3,
+        dots: false,
+        responsive: {
+    0: {
+      items: 1,
+    },
+    600: {
+      items: 3,
+    },
+    1000: {
+      nav: true,
+      items: 5,
+    },
+  },
+});
+    </script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/164071/Drift.min.js"></script>
+    <script src="/public/assets/js/zoomImage.js"></script>
+    <% } %>
+  
+    <script src="/public/assets/js/cart.js"></script>
+  <!-- <script src="/public/assets/js/cart.js"></script> -->
+  <% if(content == 'myOrder'){ %>
+    <script src="/public/assets/js/cancelOrder.js"></script>
+    <script src="/public/assets/js/myOrder.js"></script>
+    
+<% } %>
+
+<% if(content == 'changeProfileUser'){ %>
+        
+    <script src="/public/assets/js/admin_changeProfile.js"></script>
+
+    <% } %>
+<% if(content == 'changePassUser'){ %>
+        
+    <script src="/public/assets/js/admin_changePass.js"></script>
+    <script src="/public/assets/js/checkvalidate.js"></script>
+
+    <% } %>
+</html>

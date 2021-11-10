@@ -1,0 +1,80 @@
+<div class="main-order">
+    <div class="main-order-left">
+      <div class="bill-info">
+        <h3 class="bill-content">Thông tin thanh toán</h3>
+  
+        <div class="name-client-item">
+          <label for="firstName">Họ *</label>
+          <input
+            type="text"
+            id="firstName"
+            disabled
+            placeholder="FirstName"
+            value="<%= acc.firstname %>"
+          />
+        </div>
+        <div class="name-client-item">
+          <label for="lastName">Tên *</label>
+          <input
+            type="text"
+            id="lastName"
+            disabled
+            placeholder="LastName"
+            value="<%= acc.lastname %>"
+          />
+        </div>
+  
+        <div class="name-client-item">
+          <label for="address">Địa chỉ *</label>
+          <input type="text" id="address" placeholder="Địa chỉ" />
+          <span class="form-message"></span>
+        </div>
+        <div class="name-client-item">
+          <label for="Phone">Số điện thoại *</label>
+          <input
+            type="tel"
+            id="Phone"
+            placeholder="Số điện thoại"
+            disabled
+            value="<%= acc.phone %>"
+          />
+        </div>
+        <div class="name-client-item">
+          <label for="Email">Địa chỉ email *</label>
+          <input
+            type="text"
+            id="Email"
+            placeholder="Địa chỉ email"
+            disabled
+            value="<%= acc.email %>"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="main-order-right">
+      <div class="container-order">
+        <h3 class="container-order-content">Đơn hàng</h3>
+        <div class="content-items">
+          <!-- <div class="content-prd">Sản phẩm</div>
+            <div class="content-count">Số lượng</div>
+            <div class="content-price">Tạm tính</div> -->
+        </div>
+        <div class="prd-buy-items">
+          <!-- <div class="prd-buy-item">
+              <div class="buy-item-prd">Sản phẩm</div>
+              <div class="buy-item-count">Số lượng</div>
+              <div class="buy-item-price">Tạm tính</div>
+            </div> -->
+        </div>
+        <div class="total-price">
+          <!-- <div class="total-txt">Tổng</div>
+            <div class="total-end">100</div>
+            </div> -->
+        </div>
+        <button class="ok-order" onclick="listorder()">Đặt hàng</button>
+      </div>
+    </div>
+  </div>
+
+
+  

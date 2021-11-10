@@ -1,0 +1,42 @@
+<div class="body_main">
+    <div class="container_main">
+      <div class="main_title">Change Pass</div>
+      <div class="unline"></div>
+      <div id="form-main_profile">
+        <div class="main-profile_left">
+          <div class="form-input">
+            <div class="preview">
+              <img
+                id="file-ip-1-preview"
+                class="img_view"
+                src="<%= acc.avatar %>"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="main-profile_right">
+          <div class="form_info">
+            <label for="newpass">New Password</label>
+            <input type="password" id="newpass" placeholder="New Password" />
+            <span class="form-message"></span>
+          </div>
+          <div class="form_info">
+            <label for="comfirm">Comfirm password</label>
+            <input type="password" id="comfirm" placeholder="Comfirm" />
+            <span class="form-message"></span>
+          </div>
+  
+          <div class="form_info">
+            <button class="change_pass" onclick="changePass()">
+              Save Change
+            </button>
+            <span class="message-error"></span>
+          </div>
+        </div>
+      </div>
+      <div class="main-profile_update">
+        <div></div>
+      </div>
+    </div>
+  </div>
+  

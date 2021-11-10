@@ -1,0 +1,150 @@
+.body_container {
+  position: relative;
+  width: 100%;
+  padding: 140px 80px;
+  background: #eaeff2;
+  @media screen and (max-width: 768px) {
+    padding: 20px 5px;
+  }
+  .body_main {
+    position: relative;
+    width: 100%;
+    display: flex;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
+    @media screen and (max-width: 992px) {
+      display: flex;
+      flex-direction: column;
+    }
+    .main-left {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      padding-top: 60px;
+      padding-bottom: 20px;
+      gap: 20px;
+      background-image: linear-gradient(
+          90deg,
+          rgba(14, 17, 49, 0.6),
+          rgba(42, 117, 122, 0.6)
+        ),
+        url("../img/birgith-roosipuu-GdsFTnarsog-unsplash.jpg");
+      background-size: cover;
+
+      @media screen and (max-width: 768px) {
+        position: relative !important;
+        width: 100%;
+      }
+      .profile {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        .img_user {
+          width: 100px;
+          height: 100px;
+          img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+        }
+        .name_user {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #f1f1f1;
+        }
+      }
+      .main-left_items {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .item {
+            display: flex;
+            text-decoration: none;
+            width: 100%;
+            cursor: pointer;
+            color: #f1f1f1;
+            font-size: 16px;
+            justify-content: start;
+            align-items: center;
+          &:hover {
+            background: #fff;
+            color: #096d89;
+          }
+          .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 60px;
+            height: 60px;
+            padding-right: 20px;
+          }
+        }
+      }
+    }
+    .main-right {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      overflow-y: auto;
+      @media screen and (max-width: 768px) {
+        width: 100% !important;
+        margin-left: 0;
+      }
+      .header_profile {
+        width: 100%;
+        padding: 20px;
+        padding-bottom: 0;
+        h2 {
+          color: #096d89;
+        }
+      }
+      .body_profile {
+        width: 100%;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        @media screen and (max-width: 768px) {
+          grid-template-columns: 1fr;
+        }
+        .item {
+          padding: 20px;
+          p {
+            color: #096d89;
+            font-size: 20px;
+            font-weight: 500;
+          }
+          h5 {
+            color: #777;
+          }
+        }
+      }
+      .footer_profile {
+        width: 100%;
+        padding: 20px;
+        padding-top: 0;
+        @media screen and (max-width: 768px) {
+          display: flex;
+          flex-direction: column;
+        }
+        h2 {
+          color: #096d89;
+        }
+        .info {
+          display: flex;
+          gap: 15px;
+          padding: 20px;
+          i {
+            color: #096d89;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}

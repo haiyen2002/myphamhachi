@@ -1,0 +1,40 @@
+
+<% news.forEach(ele => { %>
+    <div id="modal_fixNews_<%= ele._id %>" class="modal_fixNews">
+        <div class="box_modalFix">
+            <div class="close_modalFix"><i class="fas fa-times"></i></div>
+            <div class="header_modalFix"><h2>Fix News</h2></div>
+            <div class="body_modalFix">
+                <form action="" class="form_FixNews" id="form_FixNews_<%= ele._id %>"  enctype="multipart/form-data">
+                    <div class="form-upload">
+                        <label class="label_upload" for="imgNews_<%= ele._id %>">Upload Img News</label>
+                        <input type="file" name="imgNews" id="imgNews_<%= ele._id %>"  multiple>
+                    </div>
+                <div class="form-items">
+                    <div class="form-item">
+                        <label class="form-label" for="title">Title</label>
+                        <input type="text" name="title" id="title" value="<%= ele.title %>">
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label" for="content">Content</label>
+                        <input type="text" name="content" id="content" value="<%= ele.content %>">
+                    </div>                            
+                </div>
+                <div >
+                    <label class="form-label" for="editor_<%= ele._id %>">Detail</label>
+                    <textarea name="description" id="editor_<%= ele._id %>" cols="10" rows="10"  ><%= ele.description %></textarea>
+                    <script>
+                        // Replace the <textarea id="editor1"> with a CKEditor 4
+                        // instance, using default configuration.
+                        CKEDITOR.replace( 'editor_<%= ele._id %>' );
+                    </script>
+                </div>
+                </form>
+            </div>
+            <div class="footer_modalFix">
+                <button class="comfirm_Fix" onclick="comfirmUpdateNews()">Save</button>
+                <button class="not_Fix" onclick="OffmodalFixNews()">Cancel</button>
+            </div>
+        </div>
+    </div>
+<% }) %>

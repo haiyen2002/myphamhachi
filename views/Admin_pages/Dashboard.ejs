@@ -1,0 +1,53 @@
+<div class="details">
+  <div class="rencentOrder">
+    <div class="cardHeader">
+      <h2>Rencent Order</h2>
+      <a href="#" class="btn">View All</a>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <td>Username</td>
+          <td>Total Price</td>
+          <td>Date</td>
+          <td>Status</td>
+        </tr>
+      </thead>
+      <tbody>
+        <% order.forEach(ele=>{ %>
+        <tr>
+          <td><%= ele.userId.username %></td>
+          <td><%= parseInt(ele.totalPrice).toLocaleString() %>đ</td>
+          <td><%= new Date(ele.orderDate).toLocaleDateString() %></td>
+          <td><span class="status compelete"><%= ele.status %></span></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+  <div class="rencentCustomers">
+    <div class="cardHeader">
+      <h2>Rencent Customers</h2>
+    </div>
+    <table>
+      <tbody>
+        <% user.forEach(ele=>{ %>
+        <tr>
+          <td style="width: 60px">
+            <div class="img_members">
+              <img class="img_member" src="<%= ele.avatar %>" alt="" />
+            </div>
+          </td>
+          <td>
+            <h4>
+              <%= ele.firstname %> <%= ele.lastname %>
+              <br />
+              <span><%= ele.phone %></span>
+            </h4>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>

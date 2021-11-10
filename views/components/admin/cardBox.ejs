@@ -1,0 +1,51 @@
+<div class="cardBox">
+    <a href="/admin/listUser">
+        <div class="card">
+            <div>
+              <div class="numbers"><%= user.length %></div>
+              <div class="cardName">User</div>
+            </div>
+            <div class="iconBox">
+              <i class="fas fa-users"></i>
+            </div>
+          </div>
+    </a>
+    <a href="/admin/listProduct">
+        <div class="card">
+            <div>
+              <div class="numbers"><%= product.length %></div>
+              <div class="cardName">Product</div>
+            </div>
+            <div class="iconBox">
+              <i class="fab fa-product-hunt"></i>
+            </div>
+          </div>
+    </a>
+    <a href="/admin/listOrder">
+        <div class="card">
+            <div>
+              <div class="numbers"><%= order.length %></div>
+              <div class="cardName">Order</div>
+            </div>
+            <div class="iconBox">
+              <i class="fas fa-shopping-basket"></i>
+            </div>
+          </div>
+    </a>
+    <a href="#">
+        <div class="card">
+            <div>
+              <% var sum = 0 %>
+               <% order.map(ele => { %> 
+                <% sum += parseInt(ele.totalPrice) %>
+                <% }) %>
+              <div class="numbers"><%= sum.toLocaleString() + " đ" %></div>
+              <div class="cardName">Total</div>
+            </div>
+            <div class="iconBox">
+              <i class="fas fa-coins"></i>
+            </div>
+          </div>
+    </a>
+  </div>
+  

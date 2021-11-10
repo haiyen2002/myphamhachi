@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  body {
+    overflow-x: hidden !important;
+    .container {
+      position: relative;
+      width: 100%;
+      .navigation {
+        position: fixed;
+        width: 300px;
+        height: 100%;
+        background-image:   linear-gradient(90deg, rgba(73, 138, 155, 0.6), rgba(211, 85, 194, 0.6) ), url("../img/silas-baisch--3vU48G830k-unsplash.jpg");
+        background-size: cover;
+        overflow: hidden;
+        overflow-y: auto;
+        transition: 0.5s;
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+          }
+        @media screen and (max-width: 992px) {
+          width: 300px;
+        }
+        @media screen and (max-width: 480px) {
+          width: 0;
+        }
+        ul {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          li {
+            width: 100%;
+            list-style: none;
+            &:hover {
+              background: #fff;
+            }
+            &:nth-child(1) {
+              background: transparent;
+            }
+            a {
+              position: relative;
+              text-decoration: none;
+              display: flex;
+              width: 100%;
+              color: #fff;
+              &:hover {
+                color: #03a9f4;
+              }
+              .icon {
+                display: block;
+                min-width: 60px;
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+              }
+              .title {
+                display: block;
+                padding: 0 10px;
+                line-height: 60px;
+                height: 60px;
+                white-space: nowrap;
+              }
+            }
+          }
+        }
+      }
+      .navigation.active {
+        width: 60px;
+        @media screen and (max-width: 992px) {
+          width: 0 !important;
+        }
+        @media screen and (max-width: 480px) {
+          width: 100% !important;
+          z-index: 5;
+        }
+      }
+      .main {
+        position: absolute;
+        width: calc(100% - 300px);
+        left: 300px;
+        transition: 0.5s;
+        background: #f5f5f5;
+        @media screen and (max-width: 992px) {
+          width: calc(100%-300px) !important;
+        }
+        @media screen and (max-width: 480px) {
+          width: 100% !important;
+          left: 0;
+        }
+
+        .topbar {
+          width: 100%;
+          background: #fff;
+          height: 60px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .toggle {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            font-size: 32px;
+            text-align: center;
+            line-height: 60px;
+            transition: 0.5s;
+          }
+          .toggle.active {
+            left: 0;
+            @media screen and (max-width: 480px) {
+              z-index: 10 !important;
+            }
+          }
+          .search {
+            position: relative;
+            width: 35%;
+            margin: 0 10px;
+            @media screen and (max-width: 480px) {
+              width: 250px !important;
+            }
+            label {
+              position: relative;
+              width: 100%;
+
+              input {
+                width: 100%;
+                height: 40px;
+                border-radius: 40px;
+                padding: 5px 30px;
+                outline: none;
+                border: 1px solid rgba(0, 0, 0, 0.3);
+                font-size: 16px;
+              }
+              .btn_search {
+                position: absolute;
+                right: 10px;
+                top: -2px;
+                border: none;
+                background: none;
+                cursor: pointer;
+                .fa-search {
+                  font-size: 24px;
+                  color: rgba(0, 0, 0, 0.5);
+                }
+              }
+            }
+          }
+          .user {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            gap: 20px;
+            width: 25%;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 20px;
+            .name_admin {
+              font-weight: bold;
+              font-size: 15px;
+              color: #03a9f4;
+              @media screen and (max-width: 768px) {
+                display: none;
+              }
+            }
+            .user_img {
+              width: 50px;
+              height: 50px;
+              object-fit: cover;
+              object-position: center;
+              border-radius: 50%;
+            }
+          }
+        }
+        .cardBox {
+          display: grid;
+          width: 100%;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          gap: 20px;
+          padding: 20px;
+          @media screen and (max-width: 1024px) {
+            grid-template-columns: 1fr 1fr !important;
+          }
+          @media screen and (max-width: 992px) {
+            grid-template-columns: 1fr 1fr !important;
+          }
+          @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr !important;
+          }
+          a {
+            text-decoration: none;
+            .card {
+              display: flex;
+              justify-content: space-between;
+              width: 100%;
+              padding: 20px;
+                color: #fff;
+              background: linear-gradient(90deg, rgba(73, 138, 155, 0.6), rgba(211, 85, 194, 0.6) );
+              border-radius: 20px;
+              box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+              &:hover {
+                background: #fff;
+              }
+              &:hover .numbers {
+                color: #03a9f4;
+              }
+              &:hover .iconBox {
+                color: #03a9f4;
+              }
+              &:hover .cardName {
+                color: #03a9f4;
+              }
+              div {
+                .numbers {
+                  font-weight: 600;
+                  font-size: 24px;
+                  color: #fff;
+                }
+                .cardName {
+                  color: #fff;
+                }
+              }
+              .iconBox {
+                font-size: 32px;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+      .main.active {
+        width: calc(100% - 60px) !important;
+        left: 60px;
+        overflow-x: auto;
+        @media screen and (max-width: 992px) {
+          width: 100% !important;
+          left: 0;
+        }
+        @media screen and (max-width: 480px) {
+          left: 85%;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+p,
+span {
+  font-family: "Roboto", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}

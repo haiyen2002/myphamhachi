@@ -1,0 +1,21 @@
+<div class="topbar">
+    <div class="toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="search">
+        <label for="">
+        <input type="text" placeholder="Search by name ..." id="search"  />
+        <button class="btn_search" onclick="render()"><i class="fas fa-search"></i></button>
+        </label>
+    </div>
+    <div class="user">
+        <span class="name_admin">Admin, <%= acc.firstname %> <%= acc.lastname %></span>
+        <img
+        class="user_img"
+        src="<%= acc.avatar  %>"
+        alt=""
+        />
+        
+    </div>
+</div>
+  

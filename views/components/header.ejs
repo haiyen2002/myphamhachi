@@ -1,0 +1,159 @@
+<div id="header">
+  <div class="header-top_wrap">
+    <div class="header-top">
+      <div class="header-top_contact">
+        <span class="header-top_contact-item">
+          <span class="contact-icon"><i class="fas fa-mobile-alt"></i></span>
+          <a href="tel:0866633805">0866633805</a>
+        </span>
+        <span class="header-top_contact-item">
+          <span class="contact-icon"><i class="far fa-envelope"></i></span>
+          <a href="mailto: info@nodemy.vn"> info@nodemy.vn</a>
+        </span>
+        <span class="header-top_contact-item">
+          <span class="contact-icon"
+            ><i class="fas fa-map-marker-alt"></i
+          ></span>
+          <a href="">Hệ thống cửa hàng</a>
+        </span>
+      </div>
+      <div class="header-top_account">
+        <span>
+            <a href="/login">Đăng nhập</a>
+            /
+            <a href="/user/dangky">Đăng kí</a>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="header-address">
+    <p>
+      <a href="">
+        <i class="fas fa-home"></i>
+        <strong>HOME: </strong>
+      </a>
+      Tầng 2, BT3 A4, ngõ 214 Nguyễn Xiển, Thanh xuân, Hà Nội, Việt Nam
+    </p>
+  </div>
+
+</div>
+<div class="header-bottom">
+    <div class="container">
+        <div class="header-bottom_main">
+            <div class="header-main-mobile">
+              <div class="main-mobile-item">
+                <i class="fas fa-bars"></i>
+              </div>
+            </div>
+            <a class="logo-header" href="/">
+              <img class="main-md-logo" src="../../public/assets/img/VNA_logo_vn.png" alt="" />
+              <img class="main-mobile-logo" src="../../public/assets/img/VNA_logo_vn.png" alt="" />
+            </a>
+            <div class="main-right">
+              <a>
+                <span id="header-btn-search" onclick="openSearch()"><i class="fas fa-search"></i></span>
+              </a>
+              <span class="header-cart">
+                <a class="box-cart" href="/cart">
+                  <span style="margin-right: 0px">GIỎ HÀNG</span>
+                  <img
+                    class="img-box-cart"
+                    src="../../public/assets/img/hd_mainmenu_icon_cart.png"
+                    alt=""
+                  />
+         
+                    <span class="countSumCart"></span>
+     
+                </a>
+                <div class="container-cart">
+                  <div class="tableTitle"></div>
+                  <div id="buyItems"></div>
+                  <div class="priceSumCart"></div>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div class="header-bottom_nav">
+            <div class="header-bottom_nav__item">
+              <a class="nav__item_title" href="/">
+                <span>
+                  <img src="../../public/assets/img/home_hover.png" alt="" />
+                </span>
+                <span>HOME</span>
+              </a>
+            </div>
+            <div class="header-bottom_nav__item">
+                <a class="nav__item_title" href="/filter">
+                    <span>
+                        <img src="../../public/assets/img/sanpham_hover (1).png" alt="">
+                    </span>
+                    <span>SẢN PHẨM
+                        <span style="display: none;" class="nav_item_icon"><i class="fas fa-angle-down"></i></span>
+                    </span>
+
+                    <div class="list-product">
+                        <!-- <div class="list-product_item">
+                            <a class="produc_item_title" href="/filter/cham-soc-toc">CHĂM
+                                SÓC TÓC</a>
+                            <a href="">Dầu xả</a>
+                            <a href="">Dầu gội</a>
+                        </div>
+                        <div class="list-product_item">
+                            <a class="produc_item_title" href="">CHĂM SÓC DA</a>
+                            <a href="">Sữa tắm</a>
+                        </div>
+                        <div class="list-product_item">
+                            <a class="produc_item_title" href="">NAM GIỚI</a>
+                            <a href="">Chăm sóc tóc cho Nam</a>
+                            <a href="">Tắm và dưỡng thể cho Nam</a>
+                        </div>
+                        <div class="list-product_item">
+                            <a class="produc_item_title" href="">TRẺ EM</a>
+                            <a href="">2-in-1 cho Trẻ em</a>
+                            <a href="">Dầu gội cho Trẻ em</a>
+                        </div> -->
+                    </div>
+                </a>
+            </div>
+            <div class="header-bottom_nav__item">
+              <a class="nav__item_title" href="/about-us">
+                <span>
+                  <img src="../../public/assets/img/vehachi_hover.png" alt="" />
+                </span>
+                <span
+                  >VỀ HACHI
+                  <span style="display: none;" class="nav_item_icon"><i class="fas fa-angle-down"></i></span>
+                </span>
+                <div class="list-product left-20">
+                  <div class="list-product_item">
+                    <a class="produc_item_title" style="display: none" href=""></a>
+                    <a href="/about-us">Về chúng tôi</a>
+                    <a href="/slogan">Tầm nhìn - Sứ mệnh - Gía trị cốt lõi</a>
+                    <a href="/contact">Liên hệ</a>
+                    <a href="/store">Hệ thống phân phối và bán lẻ</a>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="header-bottom_nav__item">
+              <a class="nav__item_title" href="/news">
+                <span>
+                  <img src="../../public/assets/img/logo3.png" alt="" />
+                </span>
+                <span
+                  >TIN TỨC
+                  <span style="display: none;" class="nav_item_icon"><i class="fas fa-angle-down"></i></span>
+                </span>
+                <!-- <div class="list-product left-20">
+                  <div class="list-product_item">
+                    <a class="produc_item_title" style="display: none" href=""></a>
+                    <a href="">Khuyến mãi</a>
+                  </div>
+                </div> -->
+              </a>
+            </div>
+          </div>
+    </div>
+  </div>
+<!-- import thu vien chuyen tieng viet sang tieng viet khong dau -->
+  <script src="https://unpkg.com/jsrmvi/dist/jsrmvi.min.js"></script>

@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Admin</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script
+		type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- Bootstrap Core CSS -->
+	<link href="/public/assets/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+	<!-- Custom CSS -->
+	<link href="/public/assets/css/style.css" rel='stylesheet' type='text/css' />
+	<!-- Graph CSS -->
+	<link href="/public/assets/css/font-awesome.css" rel="stylesheet">
+	<!-- jQuery -->
+	<link href='//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet'
+		type='text/css'>
+	<!-- lined-icons -->
+	<link rel="stylesheet" href="/public/assets/css/icon-font.min.css" type='text/css' />
+	<!-- //lined-icons -->
+	<script src="/public/assets/js/jquery-1.10.2.min.js"></script>
+	<!--skycons-icons-->
+	<script src="/public/assets/js/skycons.js"></script>
+	<!--//skycons-icons-->
+</head>
+<style>
+	.top-message {
+		background: #e44f3d;
+		padding-top: 10px;
+		padding-bottom: 13px;
+		color: #fff;
+		font-weight: 400;
+		font-size: 16px;
+
+	}
+
+	.top-message-content {
+		position: relative;
+	}
+
+	.top-message-content .glyphicon {
+		margin-right: 7px;
+	}
+
+	.top-message-icon {
+		padding: 15px;
+		background: #e44f3d;
+		color: #fff;
+		cursor: pointer;
+		position: absolute;
+		top: -12px;
+		right: 15px;
+	}
+
+	button {
+		cursor: pointer;
+		background-color: #5de6de;
+		background-image: linear-gradient(315deg, #5de6de 0%, #b58ecc 74%);
+		border: none;
+		border-radius: 50%;
+		transition: 200ms;
+	}
+
+	button:hover {
+		box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+
+	}
+
+	@keyframes bounce {
+		0% {
+			transform: translateX(-50%) translateY(-50%)
+		}
+
+		25% {
+			transform: translateX(-50%) translateY(-65%)
+		}
+
+		50% {
+			transform: translateX(-50%) translateY(-50%)
+		}
+
+		75% {
+			transform: translateX(-50%) translateY(-35%)
+		}
+
+		100% {
+			transform: translateX(-50%) translateY(-50%)
+		}
+	}
+
+	button:focus {
+		outline: none;
+	}
+</style>
+
+<body>
+	<%- include('../components/bodyhomePrd.ejs') %>
+</body>
+
+<%- include('../components/scriptadmin.ejs') %>
+	<script src="../../public/assets/js/Adminedit.js"></script>
+	<!-- <script>
+		$(window).load(function () {
+			$('#top-mess').slideDown('fast');
+		});
+
+		$(document).ready(function () {
+			$('#top-mess-hide').click(function () {
+				if ($('#top-mess').is(':visible')) {
+					$('#top-mess').slideUp('fast');
+				}
+			});
+		});
+	</script> -->
+
+</html>

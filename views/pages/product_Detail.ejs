@@ -1,0 +1,76 @@
+<div class="product-main">
+  <div class="product-main-head">
+    <a href="/">Trang chủ</a><span><i class="fas fa-angle-double-right"></i> </span>
+    <a href="/">Dầu gội</a><span><i class="fas fa-angle-double-right"></i></span>
+    <span><%= prd_detail.name%></span>
+  </div>
+    <div class="container-product">
+      <!-- SEARCH AND CATELOG -->
+      <%- include('./search&catelog') %>
+  
+      <!-- DETAIL -->
+      <div class=" container-product-right ">
+        <div class="product-detail product-card_item mainphoto">
+          <div class=" prd-detail-left main-image zoom">
+                <img
+                  class=" prd-detail-img active"
+                  src="<%= prd_detail.img[0] %>"
+                  alt=""
+                  data-zoom="<%= prd_detail.img[0] %>"
+                />
+
+          </div>
+       
+        </div>
+        <div class="prd-description">
+          <h3>MÔ TẢ</h3>
+          <p><%- prd_detail.descriptionDetails %></p>
+        </div>
+      </div>
+      <!-- PRODUCT CONTENT -->
+      <%- include('./prd-content') %>
+    </div>
+  </div>
+  <!-- <div style="padding: 50px 0; display: none;" class="block-devide"></div> -->
+  <div class="more-products">
+    <h3 class="more-prd-content">SẢN PHẨM TƯƠNG TỰ</h3>
+
+      <!-- Set up your HTML -->
+      <div class="owl-one owl-carousel owl-theme">
+        <% productss.forEach(product=>{ %>
+            <div class="item product-card_item">
+                <a href="/product/detail/<%= product._id %>">
+                    <div class="product-card_info">
+                        <div class="product-card_img">
+                            <img class="img-prd" src=<%=product.img[0] %>>
+                        </div>
+                        <div class="product-card_text">
+                            <div class="product-card_title">
+                                <%= product.name %>
+                            </div>
+                            <div class="product-card_price">
+                                <%= product.price %>
+                            </div>
+                            <% if( product.quantity > 0 ){ %>
+                            <div class="product-card_quantity">
+                               Còn <%= product.quantity %> sản phẩm                                                                                                                                             
+                            </div>
+                            <% }else{ %>
+                                <div class="not_prd">
+                                    Hết hàng                                                                                                                                             
+                                 </div>
+                            <% } %>
+                        </div>
+                    </div>
+                </a>
+                <% if( product.quantity > 0 ){ %>
+                <a class="add-to-cart"  href="/product/detail/<%= product._id %>" data-product-id="<%= product._id %>"><i class="fas fa-cart-plus"></i> Mua hàng</a>
+                <% }else{ %>
+                    <div></div>
+                <% } %>  
+        </div>
+       <% }) %>
+      </div>
+
+  </div>
+

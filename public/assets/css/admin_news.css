@@ -1,0 +1,122 @@
+.details {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  padding-top: 0;
+}
+
+.details .container_detail {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.details .container_detail .content-detail {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.details .container_detail #form-addNews {
+  position: relative;
+  width: 100%;
+}
+
+.details .container_detail #form-addNews .form-items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .details .container_detail #form-addNews .form-items {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.details .container_detail #form-addNews .form-items .form-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.details .container_detail #form-addNews .form-items .form-item input {
+  width: 100%;
+  outline: none;
+  padding: 10px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.details .container_detail #form-addNews .form-items .form-item input:focus {
+  border: 1px solid #03a9f4;
+}
+
+.details .container_detail #form-addNews .form-items .form-item input[type="file"]:focus {
+  background: #03a9f4;
+  color: #fff;
+}
+
+.details .container_detail #form-addNews .form-items .form-item label {
+  margin-bottom: 10px;
+}
+
+.details .container_detail #form-addNews .form-items .form-item .form-message {
+  margin-top: 10px;
+  color: red;
+}
+
+.details .container_detail #form-addNews .des {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.details .container_detail #form-addNews .des textarea {
+  width: 100%;
+  outline: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.details .container_detail #form-addNews .des textarea:focus {
+  border: 1px solid #03a9f4;
+}
+
+.details .container_detail .btns_add {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.details .container_detail .btns_add .btn_add {
+  width: 120px;
+  padding: 10px;
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(73, 138, 155, 0.6)), to(rgba(211, 85, 194, 0.6)));
+  background: linear-gradient(90deg, rgba(73, 138, 155, 0.6), rgba(211, 85, 194, 0.6));
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=admin_news.css.map */

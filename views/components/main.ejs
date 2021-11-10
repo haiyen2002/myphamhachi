@@ -1,0 +1,295 @@
+<div id="main">
+    <!-- <div class="main-slider"> -->
+    <div id="slider-top">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <a href=""> <img src="../../public/images/ms_banner_img3.jpg" alt=""></a>
+            </div>
+            <div class="item">
+                <a href=""> <img src="../../public/images/ms_banner_img2.jpg" alt=""></a>
+            </div>
+
+        </div>
+    </div>
+    <!-- </div> -->
+    <div class="main-banner">
+        <div class="main-banner__image">
+            <a href="">
+                <div class="main-banner__card">
+                    <img src="../../public/images/policy_banner_img1.jpg" alt="">
+                </div>
+                <div class="main-banner-hover">
+                    <div class="main-banner-hover_text">
+                        <p>Chăm sóc tóc</p>
+                        <h3>Sản phẩm chăm sóc tóc chiết xuất từ thiên nhiên</h3>
+                        <p>xem thêm</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="main-banner__card">
+                    <img src="../../public/images/policy_banner_img2 (1).png" alt="">
+                </div>
+                <div class="main-banner-hover">
+                    <div class="main-banner-hover_text">
+                        <p>Chăm sóc da</p>
+                        <h3>Sản phẩm chăm sóc da chiết xuất từ thiên nhiên</h3>
+                        <p>xem thêm</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="main-banner__card">
+                    <img src="../../public/images/policy_banner_img3 (1).png" alt="">
+                </div>
+                <div class="main-banner-hover">
+                    <div class="main-banner-hover_text">
+                        <p>Sản phẩm dành cho Nam</p>
+                        <h3>Sản phẩm dành cho Nam giới chiết xuất từ thiên nhiên</h3>
+                        <p>xem thêm</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="main-banner__contact">
+            <div class="main-banner__contact___card">
+                <a href="">
+                    <div class="icon-box-image">
+                        <img src="../../public/images/policy_icon_fly.png" alt="">
+                    </div>
+                    <div class="icon-box-text">
+                        <h3>Chính sách giao hàng</h3>
+                        <p>Hỗ trợ giao hàng toàn quốc</p>
+                    </div>
+                </a>
+            </div>
+            <div class="main-banner__contact___card">
+                <a href="">
+                    <div class="icon-box-image">
+                        <img src="../../public/images/policy_icon2.png" alt="">
+                    </div>
+                    <div class="icon-box-text">
+                        <h3>Hỗ trợ đổi, trả hàng</h3>
+                        <p>Hỗ trợ đổi, trả hàng nếu do lỗi nhà sản xuất</p>
+                    </div>
+                </a>
+            </div>
+            <div class="main-banner__contact___card">
+                <a href="">
+                    <div class="icon-box-image">
+                        <img src="../../public/images/policy_icon3.png" alt="">
+                    </div>
+                    <div class="icon-box-text">
+                        <h3>Địa chỉ mua hàng</h3>
+                        <p>Sản phẩm được phân phối tại hệ thống siêu thị BigC, Vinmart, Thành Đô…hoặc các cửa hàng mỹ
+                            phẩm
+                            trên toàn quốc.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="main-banner__contact___card">
+                <a href="">
+                    <div class="icon-box-image">
+                        <img src="../../public/images/policy_icon4.png" alt="">
+                    </div>
+                    <div class="icon-box-text">
+                        <h3>Bảo mật</h3>
+                        <p>Chính sách bảo mật thông tin khi sử dụng website Hachi Việt Nam</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="line-devide"></div>
+
+    <div class="main-content">
+        <div class="section">
+            <div class="section-head">
+                <div class="section-title">
+                    <h1>Sản phẩm nổi bật</h1>
+                </div>
+                <div class="sub-title">
+                    Các sản phẩm nổi bật theo từng loại sản phẩm
+                </div>
+                <div class="line"></div>
+            </div>
+            <div class="section-body">
+                <div class="nav-product-popular">
+                    <ul>
+                        <% var distinct=[] %>
+                        <% types.forEach(type=> { %>
+                            <%type = type.trim()%>
+                            <% distinct.push(type.split(",")[0]) %>
+                                <% }) %>
+                                    <% var uniques=distinct.map(item=> item) .filter((value, index, self) =>
+                                        self.indexOf(value) === index) %>
+                                    %>
+                        <% uniques.forEach(type=> { %>
+                            <li class="nav-product-popular__item">
+                                <a>
+                                    <%= type %>
+                                </a>
+                            </li>
+                        <% }) %>
+                    </ul>
+                </div>
+                <% uniques.forEach(type=> { %>
+                    <div class="section-list-product">
+                        <% var count = 1 %> 
+                        <% products.forEach(product=> { %>
+                            <% if (product.prd_key.includes(type) ){ %>
+                                <% count++ %>
+                                <% if(count <=6 ){ %>
+                                    <div class="product-card product-card_item">
+                                        <a   href="/product/detail/<%= product._id %>">
+                                            <div class="product-card_info">
+                                                <div class="product-card_img">
+                                                    <img class="img-prd" src=<%=product.img[0] %> alt="">
+                                                </div>
+                                                <div class="product-card_text">
+                                                    <div class="product-card_title">
+                                                        <%= product.name %>
+                                                    </div>
+                                                    <div class="product-card_price">
+                                                        <%= (product.price).toLocaleString()%><span>đ</span>
+                                                    </div>
+                                                </div>
+                                                <% if( product.quantity > 0 ){ %>
+                                                    <div class="product-card_quantity">
+                                                       Còn <%= product.quantity %> sản phẩm                                                                                                                                              
+                                                    </div>
+                                                    <% }else{ %>
+                                                        <div class="not_prd">
+                                                            Hết hàng                                                                                                                                             
+                                                         </div>
+                                                    <% } %>
+                                            </div>
+                                        </a>
+                                        <% if( product.quantity > 0 ){ %>
+                                        <a class="add-to-cart" href="/product/detail/<%= product._id %>" data-product-id="<%= product._id %>"><i class="fas fa-cart-plus"></i> Mua Ngay</a>
+                                        <% }else{ %>
+                                            <div></div>
+                                            <% } %>
+                                    </div>
+                                <% } %>  
+                                <% } %>
+                                    <% }) %>
+                    </div>
+                    <% }) %>
+            </div>
+        </div>
+        <div class="main-content_banner">
+            <div>
+                <img src="../../public/images/banner_img1.png" alt="">
+            </div>
+            <div>
+                <img src="../../public/images/banner_img2.png" alt="">
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-body">
+                <div id="slider">
+                    <% uniques.forEach((unique,index)=> { %>
+                        <div class="section-head">
+                            <div class="section-title">
+                                <h1>
+                                    <%= unique %>
+                                    </h1>
+                            </div>
+                            <div class="sub-title">
+                                Sản phẩm <%= unique %> nổi bật, chiết xuất thiên nhiên
+                            </div>
+                            <div class="line"></div>
+                            </div>
+                                <div id="owl-<%= index %>" class="owl-carousel owl-theme">
+                                    <% products.forEach(product=> { %>
+                                        <% if(product.prd_key.split(",")[0]==unique){ %>
+                                            <div class="item product-card_item">
+                                                <a href="/product/detail/<%= product._id %>">
+                                                    <div class="product-card_info">
+                                                        <div class="product-card_img">
+                                                            <img class="img-prd" src=<%=product.img[0] %>>
+                                                        </div>
+                                                        <div class="product-card_text">
+                                                            <div class="product-card_title">
+                                                                <%= product.name %>
+                                                            </div>
+                                                            <div class="product-card_price">
+                                                                <%= product.price %>
+                                                            </div>
+                                                            <% if( product.quantity > 0 ){ %>
+                                                            <div class="product-card_quantity">
+                                                               Còn <%= product.quantity %> sản phẩm                                                                                                                                             
+                                                            </div>
+                                                            <% }else{ %>
+                                                                <div class="not_prd">
+                                                                    Hết hàng                                                                                                                                             
+                                                                 </div>
+                                                            <% } %>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                                <% if( product.quantity > 0 ){ %>
+                                                <a  href="/product/detail/<%= product._id %>" class="add-to-cart" data-product-id="<%= product._id %>"><i class="fas fa-cart-plus"></i> Mua Ngay</a>
+                                                <% }else{ %>
+                                                    <div></div>
+                                                <% } %>  
+                                        </div>
+
+                                            <% } %>
+                                        <% }) %>
+                                    </div>
+                                <% }) %>
+                                 </div>
+                            </div>
+
+                        </div>
+
+        <div class="section">
+            <div class="section-head">
+                <div class="section-title">
+                    <h1>Tin tức</h1>
+                </div>
+                <div class="sub-title">
+                    Tin mới nhất, nóng hổi nhất
+                </div>
+                <div class="line"></div>
+            </div>
+            <div class="section-body">
+                <div id="slider">
+                    <div class="owl-carousel owl-theme">
+                        <% news.forEach(ele => { %>
+                            <a href="/news/<%= ele._id %>">
+                                <div class="item box-card">
+                                    <div class="news-card">
+                                        <div class="card-images">
+                                            <img src="<%= ele.imgNews %>" alt="">
+                                        </div>
+                                        <div class="card-text">
+                                            <div class="card-text_title">
+                                                <h3><%= ele.title %></h3>
+                                            </div>
+                                            <div class="card-text_date">
+                                                <%= ele.dateSubmit.toLocaleDateString() %>
+                                            </div>
+                                            <div class="card-line"></div>
+                                            <div class="card-description">
+                                                <!-- <%= ele.content %> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        <% }) %>
+                        
+ 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-devide">
+
+    </div>
+</div>
+

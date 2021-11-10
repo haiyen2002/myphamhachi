@@ -1,0 +1,116 @@
+.details {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px;
+    padding-top: 0;
+    gap: 20px;
+    @media screen and (max-width: 992px) {
+      display: flex !important;
+    }
+    .rencentOrder {
+      position: relative;
+      min-height: 500px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      overflow-y: auto;
+      @media screen and (max-width: 768px) {
+        overflow-x: auto;
+      }
+      .cardHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        h2 {
+          font-weight: bold;
+        }
+        .btn {
+          background: linear-gradient(90deg, rgba(36, 44, 129, 0.6), rgba(224, 108, 209, 0.6) );
+          color: #fff;
+          padding: 5px;
+          text-decoration: none;
+          border-radius: 5px;
+        }
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 10px;
+        @media screen and (max-width: 768px) {
+          width: 800px !important;
+        }
+        thead {
+          tr {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            td {
+              font-weight: 600;
+              padding: 10px 5px;
+              font-size: 16px;
+              &:last-child {
+                text-align: right;
+              }
+              &:nth-child(2) {
+                text-align: left;
+              }
+              &:nth-child(3) {
+                text-align: left;
+              }
+ 
+            }
+          }
+        }
+        tbody {
+          tr {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            &:hover {
+              background: linear-gradient(90deg, rgba(36, 44, 129, 0.6), rgba(224, 108, 209, 0.6) );
+              color: #fff;
+            }
+            &:last-child {
+              border-bottom: none;
+            }
+            td {
+              padding: 10px 5px;
+              font-size: 16px;
+              &:last-child {
+                text-align: right;
+              }
+              &:nth-child(2) {
+                text-align: left;
+              }
+              &:nth-child(3) {
+                text-align: left;
+              }
+              .btn_fix {
+                background: #f9ca3f;
+                color: #fff;
+                border: none;
+                padding: 5px 10px;
+                cursor: pointer;
+                text-decoration: none;
+                border-radius: 4px;
+              }
+              .btn_delete {
+                background: #e74c3c;
+                color: #fff;
+                border: none;
+                padding: 5px 10px;
+                cursor: pointer;
+                text-decoration: none;
+                border-radius: 4px;
+              }
+                      
+            }
+          }
+        }
+      }
+    }
+  }
+  
+
+
+
+  

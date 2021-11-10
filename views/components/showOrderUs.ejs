@@ -1,0 +1,64 @@
+<%if(JSON.stringify(result)==JSON.stringify([])){%>
+    <div class="content__no_orders" style="display:block">
+        <div class="listOrder">
+            <span>Bạn chưa có đơn hàng nào</span>
+        </div>
+    </div>
+    <% }else{ result.map((ele , index)=>{ %>
+        <div class="content__block all" style="display:block">
+            <div class="listOrder">
+                <div class="idOrders">
+                    <span>
+                        ID đơn hàng : <%= ele._id%>
+                    </span>
+                </div>
+                <hr>
+                <% for(let i1=0 ; i1 < ele.product.length ; i1++){ %>
+                    <div style="margin-bottom : 5px" class="Products__views--orders">
+                        <div class="imagePrd">
+                            <img src="<%= ele.product[i1].productId.img[0]%>" alt="" height="80px">
+                        </div>
+                        <div class="namePrd" style="width : 100%">
+                            <span>
+                                <%= ele.product[i1].productId.name%>
+                            </span>
+                            <div style="display: flex;justify-content: space-between;" class="footer--orders">
+                                <p>
+                                    x<%= ele.product[i1].quantity%>
+                                </p>
+                                <p>
+                                    giá : đ<%=ele.product[i1].productId.price.toLocaleString()%>
+                                </p>
+                                <p>
+                                    Tổng tiền : đ<%= (parseInt(ele.product[i1].productId.price) *
+                                        ele.product[i1].quantity).toLocaleString() %>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                        <hr>
+
+                        <div class="address">
+                            <span>
+                                Gửi hàng đến : <%= ele.address%>
+                            </span>
+                        </div>
+                        <div class="totalPrice">
+                            <span>
+                                Tổng tiền đơn : đ<%= parseInt(ele.totalPrice).toLocaleString() %>
+                            </span>
+                        </div>
+                        <div class="orderDate">
+                            <span>
+                                Thời gian đặt hàng : <%= ele.orderDate.toLocaleDateString()%>
+                            </span>
+                        </div>
+                        <div class="status">
+                            <span>
+                                Trạng thái : <%= ele.status%>
+                            </span>
+                        </div>
+            </div>
+        </div>
+        <% }) }%>

@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+.main-order {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 30px;
+  @media screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0;
+  }
+  .main-order-left {
+    display: flex;
+    border-right: 1px solid #b2bec3;
+    padding: 0 20px;
+    @media screen and (max-width: 800px) {
+      border-right: none;
+      width: 100%;
+    }
+    .bill-info {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      border: 3px solid #b2bec3;
+      gap: 16px;
+      padding: 20px;
+      .bill-content {
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        color: #006885;
+      }
+      .name-client-item {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        label {
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+        input {
+          padding: 10px 15px;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+        .form-message {
+          margin-top: 5px;
+          color: red;
+        }
+      }
+    }
+  }
+  .main-order-right {
+    padding: 0 20px;
+    .container-order {
+      padding: 20px;
+      border: 3px solid #b2bec3;
+      .container-order-content {
+        text-transform: uppercase;
+        color: #006885;
+        margin-bottom: 20px;
+      }
+      .content-items {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        padding: 10px 0;
+        border-bottom: 2px solid #ccc;
+      }
+      .prd-buy-items {
+        width: 100%;
+        .prd-buy-item {
+          display: grid;
+          grid-template-columns: 2fr 1fr 1fr;
+          padding: 10px 0;
+          border-bottom: 2px solid #ccc;
+          .buy-item-count::before {
+            content: "x ";
+            font-weight: 600;
+          }
+        }
+      }
+      .total-price {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        padding: 10px 0;
+        .total-txt {
+          color: #006885;
+          text-transform: uppercase;
+          font-weight: 600;
+        }
+
+        .total-end {
+          color: #006885;
+          font-weight: 600;
+        }
+      }
+      .ok-order {
+        width: 100%;
+        height: 45px;
+        background: #006885;
+        color: #fff;
+        border: none;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 600;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}
+

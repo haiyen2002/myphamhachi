@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders User</title>
+</head>
+<style>
+    /* Some style for Tabs */
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        background-color: #fff;
+
+    }
+
+    a {
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .container {
+        width: auto;
+        max-width: 70%;
+        margin: 50px auto;
+    }
+
+    hr {
+        margin: 20px 0;
+        border: 1px solid #ddd;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col-4 {
+        width: 30%;
+    }
+
+    .col-6 {
+        width: 70%;
+        position: relative;
+        height: 200px;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li a {
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 15px;
+        background-color: #f1f1f1;
+        border: 1px solid ivory;
+        color: #333;
+    }
+
+    .listOrder {
+        width: auto;
+        background-color: white;
+        margin-top: 10px;
+    }
+
+    .content__block {
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        animation: slide 0.8s;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .content__no_orders {
+        text-align: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px;
+        animation: slide 0.8s;
+        height: auto;
+        color: red;
+    }
+
+    @keyframes slide {
+        from {
+            opacity: 0;
+            transform: translateX(-15%);
+        }
+
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    .content__block:first {
+        z-index: 5;
+    }
+
+    ._1MmTVs {
+        padding: 12px 0;
+        margin: 12px 0;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 1px 1px 0 rgb(0 0 0 / 5%);
+        color: #212121;
+        background: #eaeaea;
+        border-radius: 2px;
+    }
+
+    .Products__views--orders {
+
+        display: flex;
+        flex-direction: row;
+    }
+
+    .imagePrd {
+        border: 1px solid lightgray;
+        margin-left: 5px;
+        margin-right: 10px;
+    }
+
+    ._1MmTVs>input {
+        flex: 1;
+        font-size: 14px;
+        line-height: 16px;
+        border: 0;
+        outline: none;
+        background-color: inherit;
+    }
+
+    ._1MmTVs>svg {
+        margin: 0 15px;
+        stroke: #bbb;
+    }
+
+    button {
+        cursor: pointer;
+        background-color: #5de6de;
+        background-image: linear-gradient(315deg, #5de6de 0%, #b58ecc 74%);
+        border: none;
+        border-radius: 50%;
+        transition: 200ms;
+    }
+
+    button:hover {
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+
+    }
+
+    @keyframes bounce {
+        0% {
+            transform: translateX(-50%) translateY(-50%)
+        }
+
+        25% {
+            transform: translateX(-50%) translateY(-65%)
+        }
+
+        50% {
+            transform: translateX(-50%) translateY(-50%)
+        }
+
+        75% {
+            transform: translateX(-50%) translateY(-35%)
+        }
+
+        100% {
+            transform: translateX(-50%) translateY(-50%)
+        }
+    }
+
+    button:focus {
+        outline: none;
+    }
+</style>
+
+<body>
+    <main class="container">
+        <div class="_1MmTVs"><svg width="19px" height="19px" viewBox="0 0 19 19">
+                <g id="Search-New" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="my-purchase-copy-27" transform="translate(-399.000000, -221.000000)" stroke-width="2">
+                        <g id="Group-32" transform="translate(400.000000, 222.000000)">
+                            <circle id="Oval-27" cx="7" cy="7" r="7"></circle>
+                            <path d="M12,12 L16.9799555,16.919354" id="Path-184" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </g>
+                    </g>
+                </g>
+            </svg><input autocomplete="off" placeholder="Tìm kiếm theo tên sản phẩm hoặc ID đơn hàng"
+                onchange="searchOr()" value=""></div>
+        <hr>
+        <section class="row">
+
+            <%- include('../Components/showOrderUs.ejs'); -%>
+                <section>
+    </main>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    async function searchOr() {
+        const keyseach = $("input").val()
+        const result = await $.ajax({
+            type: "POST"
+            , url: "/check/searchUserOrder",
+            data: {
+                id: window.location.search.split('=')[1],
+                search: keyseach
+            }
+        })
+        if (result) {
+            $(".row").html("");
+            $(".row").html(result);
+        }
+    }
+</script>
+
+</html>

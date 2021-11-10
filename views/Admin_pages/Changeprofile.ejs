@@ -1,0 +1,88 @@
+<div class="body_main">
+    <div class="container_main">
+      <div class="main_title">Change Profile</div>
+      <div class="unline"></div>
+      <form id="form-main_profile" action="" enctype="multipart/form-data">
+        <div class="main-profile_left">
+          <div class="form-input">
+            <div class="preview">
+              <img
+                id="file-ip-1-preview"
+                class="img_view"
+                src="<%= acc.avatar %>"
+              />
+            </div>
+            <label class="label_input-img" for="file-ip-1">Upload Image</label>
+            <input
+              type="file"
+              name="thumbnail"
+              id="file-ip-1"
+              accept="image/*"
+              onchange="showPreview(event);"
+              multiple
+            />
+          </div>
+        </div>
+        <div class="main-profile_right">
+          <div class="form_info">
+            <label for="firstName">First Name</label>
+            <input
+              type="text"
+              name="firstname"
+              id="firstName"
+              placeholder="First Name"
+              value="<%= acc.firstname %>"
+            />
+          </div>
+          <div class="form_info">
+            <label for="lastName">Last Name</label>
+            <input
+              type="text"
+              name="lastname"
+              id="lastName"
+              placeholder="Last Name"
+              value="<%= acc.lastname %>"
+            />
+          </div>
+          <div class="form_info">
+            <label for="email">Email</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Email"
+              value="<%= acc.email %>"
+            />
+          </div>
+          <div class="form_info">
+            <label for="phone">Phone</label>
+            <input
+              type="text"
+              name="phone"
+              id="phone"
+              placeholder="Phone"
+              value="<%= acc.phone %>"
+            />
+          </div>
+          <div class="form_info">
+            <label for="birthday">BrithDay</label>
+            <input
+              type="date"
+              name="birthday"
+              id="birthday"
+              value="<%= acc.birthday %>"
+            />
+          </div>
+        </div>
+      </form>
+      <div class="main-profile_update">
+        <div></div>
+        <div class="btn-update">
+          <button class="save_change" onclick="changeProfile()">
+            Save Change
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

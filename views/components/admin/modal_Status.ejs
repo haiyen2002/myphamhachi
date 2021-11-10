@@ -1,0 +1,25 @@
+<% order.forEach(ele => { %>
+
+    <div class="modal_Status" id="modal_Status_<%= ele._id%>">
+        <div class="modal_statusBox">
+            <div class="modalStatus_close">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="header_modalStatus">
+                <h4>Update Status</h4>
+            </div>
+            <div class="body_modalStatus">
+                <select class="select_Status" name="" id="select_Status_<%= ele._id %>">
+                    <option value="Pending...">Pending...</option>
+                    <option value="Shipping">Shipping</option>
+                    <option value="Delivered">Delivered</option>
+                </select>
+            </div>
+            <div class="footer_modalStatus">
+                <button class="change_Status" onclick="StatusUpdate()">Save</button>
+                <button class="not_change" onclick="OffmodalStatus()">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+<% })%>

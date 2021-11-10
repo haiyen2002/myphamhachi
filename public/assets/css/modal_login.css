@@ -1,0 +1,159 @@
+.modal-login {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.74);
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  z-index: 11;
+}
+
+.modal-login .close-login {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 32px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.modal-login .box-login {
+  width: 400px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  background: rgba(241, 235, 235, 0.856);
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.74);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.74);
+}
+
+.modal-login .box-login .form-login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-login .box-login .form-login h2 {
+  text-align: center;
+  color: #006885;
+  margin-bottom: 16px;
+}
+
+.modal-login .box-login .form-login .input_box {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #006885;
+}
+
+.modal-login .box-login .form-login .input_box .input_icon {
+  position: absolute;
+  top: 8px;
+}
+
+.modal-login .box-login .form-login .input_box #user,
+.modal-login .box-login .form-login .input_box #pass {
+  width: 100%;
+  padding: 12px 25px;
+  margin-bottom: 16px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #006885;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #006885;
+}
+
+.modal-login .box-login .form-login .input_box #user::-webkit-input-placeholder,
+.modal-login .box-login .form-login .input_box #pass::-webkit-input-placeholder {
+  color: #006885;
+}
+
+.modal-login .box-login .form-login .input_box #user:-ms-input-placeholder,
+.modal-login .box-login .form-login .input_box #pass:-ms-input-placeholder {
+  color: #006885;
+}
+
+.modal-login .box-login .form-login .input_box #user::-ms-input-placeholder,
+.modal-login .box-login .form-login .input_box #pass::-ms-input-placeholder {
+  color: #006885;
+}
+
+.modal-login .box-login .form-login .input_box #user::placeholder,
+.modal-login .box-login .form-login .input_box #pass::placeholder {
+  color: #006885;
+}
+
+.modal-login .box-login .form-login .input_box #user:focus,
+.modal-login .box-login .form-login .input_box #pass:focus {
+  color: #006885;
+  border-bottom: 1px solid #e74c3c;
+}
+
+.modal-login .box-login .form-login .on-regiser {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 16px;
+  color: #006885;
+}
+
+.modal-login .box-login .form-login .on-regiser:hover {
+  color: #4cd137;
+}
+
+.modal-login .box-login .form-login .on-login {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 16px;
+  border: none;
+  border: 1px solid #006885;
+  background: none;
+  color: #006885;
+  cursor: pointer;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.modal-login .box-login .form-login .on-login:hover {
+  color: #4cd137;
+  border: 1px solid #4cd137;
+}
+/*# sourceMappingURL=modal_login.css.map */

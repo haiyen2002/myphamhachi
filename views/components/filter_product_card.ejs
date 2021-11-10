@@ -1,0 +1,33 @@
+<div class="filter-col filter-col-4 currProduct product-card_item">
+  <a class="product-filter__card" href="/product/detail/<%= id %>">
+    <div class="product-filter-card__top">
+      <img class="img-prd" src="<%= image %>" alt="" />
+    </div>
+    <div class="product-filter-card__bottom">
+      <div class="product-filter-card__name product-card_title">
+        <%= name %>
+      </div>
+      <div class="product-filter-card__price product-card_price">
+        <%= price %>
+      </div>
+      <% if( quantity > 0 ){ %>
+      <div class="product-card_quantity">
+        Còn <%= quantity %> sản phẩm
+     </div>
+     <% }else{ %>
+        <div class="product-card_quantity not_prd-detail">
+            Hết hàng                                                                                                                                             
+        </div>
+    <% } %>
+    </div>
+  </a>
+  <% if( quantity > 0 ){ %>
+  <a class="add-to-cart" href="/product/detail/<%=id%>" data-product-id="<%= id %>">
+    <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+  </a>
+  <% }else{ %>
+    <div>
+                                                                                                                                               
+    </div>
+<% } %>
+</div>

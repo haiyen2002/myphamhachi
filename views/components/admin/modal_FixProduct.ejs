@@ -1,0 +1,57 @@
+
+<% product.forEach(ele => { %>
+    <div id="modal_fixProduct_<%= ele._id %>" class="modal_fixProduct">
+        <div class="box_modalFix">
+            <div class="close_modalFix"><i class="fas fa-times"></i></div>
+            <div class="header_modalFix"><h2>Fix Product</h2></div>
+            <div class="body_modalFix">
+                <form action="" class="form_FixProduct" id="form_FixProduct_<%= ele._id %>"  enctype="multipart/form-data">
+                    <div class="form-upload">
+                        <label class="label_upload" for="img_product_<%= ele._id %>">Upload Img</label>
+                        <input type="file" name="products" id="img_product_<%= ele._id %>"  multiple>
+                    </div>
+                <div class="form-items">
+                    <div class="form-item">
+                        <label class="form-label" for="name">Name</label>
+                        <input type="text" name="name" id="name" value="<%= ele.name %>">
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label" for="codeProduct">Code Product</label>
+                        <input type="text" name="codeProduct" id="codeProduct" value="<%= ele.codeProduct %>">
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label" for="price">Price</label>
+                        <input type="text" name="price" id="price" value="<%= ele.price %>">
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label" for="quantity">Quantity</label>
+                        <input type="text" name="quantity" id="quantity" value="<%= ele.quantity %>" >
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label" for="prd_key">prd_key</label>
+                        <input type="text" name="prd_key" id="prd_key" value="<%= ele.prd_key %>">
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label" for="Rate">Rate</label>
+                        <input class="form-label" type="text" name="Rate" id="Rate" value="<%= ele.rate %>">
+                    </div>
+                    
+                </div>
+                <div >
+                    <label class="form-label" for="des">Description Details</label>
+                    <textarea name="des" id="editor_<%= ele._id %>" cols="10" rows="10"  ><%= ele.descriptionDetails %></textarea>
+                    <script>
+                        // Replace the <textarea id="editor1"> with a CKEditor 4
+                        // instance, using default configuration.
+                        CKEDITOR.replace( 'editor_<%= ele._id %>' );
+                    </script>
+                </div>
+                </form>
+            </div>
+            <div class="footer_modalFix">
+                <button class="comfirm_Fix" onclick="comfirmUpdate()">Save</button>
+                <button class="not_Fix" onclick="OffmodalFix()">Cancel</button>
+            </div>
+        </div>
+    </div>
+<% }) %>

@@ -1,0 +1,16 @@
+.mainphoto img {
+    min-width: 400px;
+   max-width: 100%;
+ }
+ 
+ /* .zoom_01 {
+   border: 1px solid red;
+ }
+ 
+ img.data-zoom {
+   border: 4px solid black;
+ }
+ 
+ .mainphoto img[src] {
+   border: 3px solid #000;
+ } */

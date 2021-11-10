@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../../public/assets/css/mobile_nav-filter.css">
+    <link rel="stylesheet" href="../../public/assets/css/filter.css">
+    <link rel="stylesheet" href="../../public/assets/css/base.css">
+    <link rel="stylesheet" href="../../public/assets/css/header.css">
+    <link rel="stylesheet" href="../../public/assets/css/footer.css">
+    <link rel="stylesheet" href="../../public/assets/css/product_card.css">
+    <link rel="stylesheet" href="../../public/assets/css/product-filter.css">
+    <link rel="stylesheet" href="/public/assets/css/cart1.css">
+    <link rel="stylesheet" href="/public/assets/css/search_overlay.css">
+    <link rel="stylesheet" href="/public/assets/css/nav-modal-mobile.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- owl carousel css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../../public/assets/css/bootstrap.min.css" />
+    <script type="text/javascript" src="../../public/assets/js/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+    <!-- search -->
+    <%- include('../components/search_overlay.ejs') %>
+    <!-- header -->
+    <%- include('../components/header') %>
+
+    <!-- modal-nav-mobile -->
+    
+    <%- include('../components/modal_nav-mobile.ejs') %>
+
+    <!-- filter-nav-mobile -->
+    <%- include('../components/mobile_nav-filter.ejs') %>
+    <!-- content -->
+    <%- include('../components/filter_content') %>
+
+    <!-- footer -->
+    <%- include('../components/footer') %>
+
+    <!-- jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- own caroucell -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+            integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+    <!-- js -->
+        <script src="../../public/assets/js/filter.js"></script>
+        <script src="../../public/assets/js/filter-search-mobile.js"></script>
+        <script src="../../public/assets/js/header.js"></script>
+        <!-- <script src="../../public/assets/js/index.js"></script> -->
+        <script src="../../public/assets/js/mobile_nav-filter.js"></script>
+    </body>
+    <script src="/public/assets/js/cart_localStorage.js"></script>
+    <script src="/public/assets/js/form_page.js"></script>
+    <script src="/public/assets/js/search-product.js"></script>
+    <script src="/public/assets/js/signin-login.js"></script>
+
+</html>

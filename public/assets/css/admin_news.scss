@@ -1,0 +1,100 @@
+.details{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    padding-top: 0;
+    .container_detail{
+        position: relative;
+        width: 100%;
+        background: #fff;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        .content-detail{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        #form-addNews{
+            position: relative;
+            width: 100%;   
+            .form-items{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                width: 100%;
+                gap: 20px;
+                @media screen and (max-width: 768px) {
+                    grid-template-columns: 1fr;
+                }
+                .form-item{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    padding: 10px 0;
+                    input{
+                        width: 100%;
+                        outline: none;
+                        padding: 10px 15px;
+                        border: 1px solid rgba(0, 0, 0, 0.2);
+                        border-radius: 10px;
+                        font-size: 14px;
+                        &:focus{
+                            border: 1px solid #03a9f4;
+
+                        }
+                    }
+                    input[type="file"]{
+                        &:focus{
+                            background: #03a9f4;
+                            color: #fff;
+                        }
+                    }
+                    label{
+                        margin-bottom: 10px;
+                    }
+                   
+                    .form-message{
+                        margin-top: 10px;
+                        color: red;
+                    }
+                }
+               
+            }
+            .des{
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                textarea{
+                    width: 100% ;
+                    outline: none;
+                    padding: 10px 15px;
+                    border-radius: 10px;
+                    border: 1px solid rgba(0, 0, 0, 0.2);
+                    &:focus{
+                        border: 1px solid #03a9f4;
+
+                    }
+                }
+            }
+           
+        }
+        .btns_add{
+            width: 100%;
+            padding-top: 20px;
+            .btn_add{
+                width: 120px;
+                padding: 10px;
+                cursor: pointer;
+                background: linear-gradient(90deg, rgba(73, 138, 155, 0.6), rgba(211, 85, 194, 0.6) );
+                color: #fff;
+                font-size: 20px;
+                border: none;
+                border-radius: 10px;
+                
+
+            }
+        }
+
+    }
+ 
+
+}

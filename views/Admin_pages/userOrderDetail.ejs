@@ -1,0 +1,54 @@
+<div class="body_container">
+    <div class="body_main">
+      <div class="main-left">
+        <div class="profile">
+          <div class="img_user">
+            <img src="<%= userOrder.avatar %>" alt="" />
+          </div>
+          <div class="name_user">
+            <h4><%= userOrder.firstname %> <%= userOrder.lastname %></h4>
+          </div>
+        </div>
+ 
+      </div>
+      <div class="main-right">
+        <!-- <div class="search-order">
+              <input
+                type="text"
+                name=""
+                id=""
+                placeholder="Tìm kiếm theo id hoặc tên sản phẩm"
+              />
+            </div> -->
+  
+        <div class="container-orders">
+          <div class="content">
+            <h2>Đơn hàng của user</h2>
+            <hr />
+          </div>
+          <% if(OrderDetail.length > 0) { %> <% OrderDetail.forEach( (ele) => { %>
+  
+          <a class="container-order" onclick="viewOrderDetail('<%= ele._id %>')">
+            <div class="header-order">
+              <div class="order-id">Mã đơn hàng: <%= ele._id %></div>
+              <div class="date_order">
+                Ngày đặt hàng: <%= new Date(ele.orderDate).toLocaleDateString() %>
+              </div>
+              <div class="order-status">
+                Trạng thái đơn hàng : <%= ele.status %>
+              </div>
+            </div>
+          </a>
+  
+          <% }) %> <% } else{ %>
+          <div style="display: flex;justify-content: center;flex-direction: column;align-items: center;">
+            <img style="width: 200px;height: 200px;object-fit: cover;" src="https://ichibajp.com/image/img-cart-empty.png" alt="" />
+              <div style="font-size: 20px;">Chưa có đơn hàng nào</div>
+    
+          </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </div>
+  

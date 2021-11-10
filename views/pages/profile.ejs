@@ -1,0 +1,66 @@
+<div class="body_container">
+  <div class="body_main">
+    <div class="main-left">
+      <div class="profile">
+        <div class="img_user">
+          <img src="<%= acc.avatar %>" alt="" />
+        </div>
+        <div class="name_user">
+          <h4><%= acc.firstname %> <%= acc.lastname %></h4>
+        </div>
+      </div>
+      <div class="main-left_items">
+        <a class="item" href="/profile" >
+            <span class="icon"><i class="fas fa-user"></i></span>
+            <span>Tài khoản của tôi</span>
+        </a >
+        <a class="item" href="/changeProfileUser" >
+            <span class="icon"><i class="fas fa-user-edit"></i></span>
+            <span>Change Profile</span>
+        </a>
+        <a class="item" href="/myOrder">
+            <span class="icon"><i class="fas fa-clipboard"></i></span>
+            <span>Đơn mua</span>
+        </a>
+        <a class="item" href="/changePassUser">
+            <span class="icon"><i class="fas fa-lock-open"></i></span>
+            <span>Thay đổi mật khẩu</span>
+        </a> 
+      
+      </div>
+    </div>
+    <div class="main-right">
+      <div class="header_profile">
+        <h2>INFORMATION</h2>
+        <hr />
+      </div>
+      <div class="body_profile">
+        <div class="item">
+          <p>Email</p>
+          <h5><%= acc.email %></h5>
+        </div>
+        <div class="item">
+          <p>Phone</p>
+          <h5><%= acc.phone %></h5>
+        </div>
+        <div class="item">
+          <p>BirthDay</p>
+          <h5><%= new Date(acc.birthday).toLocaleDateString() %></h5>
+        </div>
+        <div class="item">
+          <p>Fullname</p>
+          <h5><%= acc.lastname %> <%= acc.firstname %></h5>
+        </div>
+      </div>
+      <div class="footer_profile">
+        <h2>Rencent</h2>
+        <hr />
+        <div class="info">
+          <span> <i class="fab fa-facebook-f"></i></span>
+          <span> <i class="fab fa-instagram"></i></span>
+          <span> <i class="fab fa-twitter"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+<div class="productDetail-content">
+  <div class="productDetail-content-components">
+    <div class="prd-detail-name prd-card-detail_title">
+      <p><%= prd_detail.name %></p>
+    </div>
+    <div class="prd-rate">
+      <span>Đánh giá: <%=prd_detail.rate%></span>
+    </div>
+    <div class="prd-more-infor">
+     
+      <span>Thương hiệu: Hachi |</span>
+      <span>Loại: <%= prd_detail.prd_key %> |</span>
+      <span>Mã SP: <%= prd_detail.codeProduct %></span>
+    </div>
+    <div class="share-prd-social">
+      <span style="cursor: pointer"
+        ><i style="color: #6980af" class="fab fa-facebook"></i
+      ></span>
+      <span style="cursor: pointer"
+        ><i style="color: #e05039" class="fab fa-google-plus-g"></i
+      ></span>
+      <span style="cursor: pointer"
+        ><i style="color: #00b6f1" class="fab fa-twitter"></i
+      ></span>
+    </div>
+    <div class="prd-detail-price product-card_price">
+      Giá: <span> <%= prd_detail.price.toLocaleString() %></span> đ
+    </div>
+    <% if( prd_detail.quantity > 0 ){ %>
+    <div class="product-card_quantity prd-detail-quantity">
+        Còn:<span><%= prd_detail.quantity %></span>  sản phẩm
+    </div>
+    <% }else{ %>
+    <div class="product-card_quantity not_prd-detail">Hết hàng</div>
+    <% } %>
+    <div class="form-input">
+      Số Lượng:
+      <div class="form-input-group">
+        <input type="button" value="-" onclick="minus()" />
+      <input
+        type="number"
+        id="solg"
+        value="1"
+        min="1"
+        max="<%= prd_detail.quantity %>"
+      />
+      <input  class="button-plus"  type="button" value="+" onclick="plus()" />
+      </div>
+    </div>
+    <div class="prd-detail-add">
+      <% if( prd_detail.quantity > 0 ){ %>
+        <!-- <a class="" href="/order/">   -->
+            <a href="/cart" class="prd-detail-add-gotoPay to-add" data-product-id="<%= prd_detail._id %>">
+                <i class="fas fa-cart-plus"></i> Mua
+            </a>
+      
+        <!-- </a>    -->
+      <% }else{ %>
+      <div></div>
+      <% } %>
+    </div>
+  </div>
+  <div class="productDetail-content-contact">
+    <p>GỌI HOTLINE ĐỂ MUA HÀNG NHANH HƠN</p>
+    <p>0364713664</p>
+    <p>GIAO HÀNG TỪ 01 - 03 NGÀY</p>
+    <p>
+      <span><i class="fas fa-truck-moving"></i></span> Giao hàng toàn quốc
+    </p>
+    <p>
+      <span
+        ><i class="fas fa-money-bill-wave"></i> Thanh toán (khi nhận hàng hoặc
+        chuyển khoản)</span
+      >
+    </p>
+  </div>
+</div>

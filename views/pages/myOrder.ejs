@@ -1,0 +1,70 @@
+<div class="body_container">
+  <div class="body_main">
+    <div class="main-left">
+      <div class="profile">
+        <div class="img_user">
+          <img src="<%= acc.avatar %>" alt="" />
+        </div>
+        <div class="name_user">
+          <h4><%= acc.firstname %> <%= acc.lastname %></h4>
+        </div>
+      </div>
+      <div class="main-left_items">
+        <a class="item" href="/profile" >
+            <span class="icon"><i class="fas fa-user"></i></span>
+            <span>Tài khoản của tôi</span>
+        </a >
+        <a class="item" href="/changeProfileUser" >
+            <span class="icon"><i class="fas fa-user-edit"></i></span>
+            <span>Change Profile</span>
+        </a>
+        <a class="item" href="/myOrder">
+            <span class="icon"><i class="fas fa-clipboard"></i></span>
+            <span>Đơn mua</span>
+        </a>
+        <a class="item" href="/changePassUser">
+            <span class="icon"><i class="fas fa-lock-open"></i></span>
+            <span>Thay đổi mật khẩu</span>
+        </a>     
+      </div>
+    </div>
+    <div class="main-right">
+      <!-- <div class="search-order">
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="Tìm kiếm theo id hoặc tên sản phẩm"
+            />
+          </div> -->
+
+      <div class="container-orders">
+        <div class="content">
+          <h2>Đơn hàng của bạn</h2>
+          <hr />
+        </div>
+        <% if(myorder.length > 0) { %> <% myorder.forEach( (ele) => { %>
+
+        <a class="container-order" onclick="view('<%= ele._id %>')">
+          <div class="header-order">
+            <div class="order-id">Mã đơn hàng: <%= ele._id %></div>
+            <div class="date_order">
+              Ngày đặt hàng: <%= new Date(ele.orderDate).toLocaleDateString() %>
+            </div>
+            <div class="order-status">
+              Trạng thái đơn hàng : <%= ele.status %>
+            </div>
+          </div>
+        </a>
+
+        <% }) %> <% } else{ %>
+        <div style="display: flex;justify-content: center;flex-direction: column;align-items: center;">
+          <img style="width: 200px;height: 200px;object-fit: cover;" src="https://ichibajp.com/image/img-cart-empty.png" alt="" />
+            <div style="font-size: 20px;">Bạn chưa có đơn hàng nào</div>
+  
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</div>

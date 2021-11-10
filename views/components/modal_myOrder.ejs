@@ -1,0 +1,53 @@
+
+<% myorder.forEach(ele=>{ %>
+
+    <div class="modal_viewOrder" id="modal_viewOrder_<%= ele._id %>">
+        <div class="box_viewOrder">
+            <div class="close_viewOrder">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="container_view">
+                <div class="header_view">
+                    <div class="header_view-item">Mã đơn hàng: <%= ele._id %></div>
+                    <div class="header_view-item">Ngày đặt hàng: <%= new Date(ele.orderDate).toLocaleDateString() %></div>
+                    <div class="header_view-item">Trạng thái: <%= ele.status %> <span class="status"></span> </div>
+                </div>
+                <div class="body_view">
+
+                    <% ele.product.forEach(prd=>{ %>
+
+                        <div class="body_view-item">
+                            <div class="item_img">
+                                <img src="<%= prd.productId.img[0] %>" alt="">
+                            </div>
+                            <div class="item_title">
+                                <div class="item_name"><%= prd.productId.name %></div>
+                                <div class="item_count">x<%= prd.quantity %></div>
+                                <div class="item_price"><%= prd.productId.price.toLocaleString() %> đ</div>
+                            </div>
+                        </div>
+
+                    <% }) %>
+                    
+
+                   
+                </div>
+                <div class="footer_view">
+                    <% if(ele.status != 'Delivered'){ %>
+                    <div class="cancelOrder">
+                        <button   class="cancelOrder"
+                        onclick="cancelOrder(`<%= ele._id %>`)" style="border: none;background: #e74c3c;color: #fff;margin-right: 20px;padding: 10px 20px;">Hủy đơn</button>
+                    </div>
+                    <% } %>
+                    <div class="total_price">
+                        Tổng: <%= parseInt(ele.totalPrice).toLocaleString() %> đ
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+<% })  %>
+
+

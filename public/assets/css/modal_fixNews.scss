@@ -1,0 +1,136 @@
+.modal_fixNews{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    @media screen and(max-width: 768px) {
+        flex-direction: column;
+        overflow-y: scroll;
+        position: relative;
+    }
+    .box_modalFix{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 800px;
+        max-height: 100vh;
+        background: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        @media screen and(max-width: 768px) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            overflow-y: scroll;
+
+        }
+        .close_modalFix{
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 24px;
+            text-align: center;
+        }
+        .header_modalFix{
+            padding: 10px ;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        .body_modalFix{
+            padding: 10px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            .form_FixNews{
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+                @media screen and(max-width: 768px) {
+                    display: flex;
+                    flex-direction: column;
+                    overflow-y: scroll;
+                }
+                .form-upload{
+                    display: flex;
+                    flex-direction: column;
+                    .form-img{
+                        width: 100%;
+               
+
+                    }
+                    .label_upload{
+                        background: #03a9f4;
+                        width: 100%;
+                        padding: 10px;
+                        text-align: center;
+                        color: #fff;
+                        border-radius: 10px;
+                    }
+                    #imgNews{
+                        display: none;
+                    }
+
+                }
+                .form-items{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 20px;
+                    @media screen and(max-width: 768px) {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    .form-item{
+                        display: flex;
+                        flex-direction: column;
+                        .form-label{
+                            margin-bottom: 10px;
+                        }
+                        input{
+                            padding: 10px 15px;
+                            border-radius: 10px;
+                            outline: none;
+                            border: 1px solid #777;
+                            background: #f8f9fa;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+        .footer_modalFix{
+            padding: 10px;
+            display: flex;
+            justify-content: end;
+            gap: 10px;
+            .comfirm_Fix,
+            .not_Fix{
+                width: 80px;
+                font-size: 16px;
+                padding: 10px;
+                border-radius: 10px;
+                border: none;
+                color: #fff;
+                cursor: pointer;
+            }
+            .comfirm_Fix{
+                background: #4cd137;
+            }
+            .not_Fix{
+                background: #03a9f4;
+            }
+        }
+  
+    }
+}

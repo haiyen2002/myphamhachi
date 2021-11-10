@@ -1,0 +1,64 @@
+.modal_delete {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  .box_modal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 60px;
+    .modal_close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 5px;
+      cursor: pointer;
+      font-size: 20px;
+      text-align: center;
+    }
+    .modal_header {
+      padding: 10px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .modal_body {
+      padding: 10px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .modal_footer {
+      padding: 10px;
+      display: flex;
+      justify-content: end;
+      gap: 10px;
+      .comfirm_delete {
+        padding: 5px 15px;
+        background: #03a9f4;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .not_delete {
+        padding: 5px;
+        background: #e74c3c;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+    }
+  }
+}

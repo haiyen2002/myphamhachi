@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile settings</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: aliceblue
+        }
+
+        .wrapper {
+            padding: 30px 50px;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            margin: 10px auto;
+            max-width: 600px
+        }
+
+        h4 {
+            letter-spacing: -1px;
+            font-weight: 400
+        }
+
+        .img {
+            width: 70px;
+            height: 70px;
+            border-radius: 6px;
+            object-fit: cover
+        }
+
+        #img-section p,
+        #deactivate p {
+            font-size: 12px;
+            color: #777;
+            margin-bottom: 10px;
+            text-align: justify
+        }
+
+        #img-section b,
+        #img-section button,
+        #deactivate b {
+            font-size: 14px
+        }
+
+        label {
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: 500;
+            color: #777;
+            padding-left: 3px
+        }
+
+        .form-control {
+            border-radius: 10px
+        }
+
+        input[placeholder] {
+            font-weight: 500
+        }
+
+        .form-control:focus {
+            box-shadow: none;
+            border: 1.5px solid #0779e4
+        }
+
+        select {
+            display: block;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            height: 40px;
+            padding: 5px 10px
+        }
+
+        select:focus {
+            outline: none
+        }
+
+        .button {
+            background-color: #fff;
+            color: #0779e4
+        }
+
+        .button:hover {
+            background-color: #0779e4;
+            color: #fff
+        }
+
+        .btn-primary {
+            background-color: #0779e4
+        }
+
+        .danger {
+            background-color: #fff;
+            color: #e20404;
+            border: 1px solid #ddd
+        }
+
+        .danger:hover {
+            background-color: #e20404;
+            color: #fff
+        }
+
+        @media(max-width:576px) {
+            .wrapper {
+                padding: 25px 20px
+            }
+
+            #deactivate {
+                line-height: 18px
+            }
+        }
+
+        button {
+            padding: 5px 5px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper bg-white mt-sm-5">
+        <h4 class="pb-4 border-bottom">Account settings</h4>
+        <div class="d-flex align-items-start py-3 border-bottom bodyimg">
+            <form enctype="multipart/form-data" style="display:flex">
+                <img src="" class="img" alt="">
+                <div class="pl-sm-4 pl-2" id="img-section">
+                    <input type="file" name='thumbnail' class="btn button border btn_avt"
+                        onchange="previewFile()"></input>
+                </div>
+            </form>
+        </div>
+        <div class="py-2">
+            <div class="row py-2">
+                <div class="col-md-6"> <label for="firstname">First Name</label> <input id="firstname" type="text"
+                        class="bg-light form-control" placeholder="Steve"> </div>
+                <div class="col-md-6 pt-md-0 pt-3"> <label for="lastname">Last Name</label> <input id="lastname"
+                        type="text" class="bg-light form-control" placeholder="Smith"> </div>
+            </div>
+            <div class="row py-2">
+                <div class="col-md-6"> <label for="email">Email Address</label> <input id="email" type="text"
+                        class="bg-light form-control" placeholder="steve_@email.com"> </div>
+                <div class="col-md-6 pt-md-0 pt-3"> <label for="phone">Phone Number</label> <input id="phone" type="tel"
+                        class="bg-light form-control" placeholder="+84 333-444-555"> </div>
+            </div>
+            <div class="row py-2">
+                <div class="col-md-6"> <label for="birthday">Birthday</label> <input id="birthday" type="date"
+                        class="bg-light form-control"> </div>
+            </div>
+            <div class="py-3 pb-4 border-bottom">
+                <button class="btn_save btn-primary mr-3">SaveChanges</button>
+                <button class="btn_cancel btn-primary mr-3" onclick="cancel()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+<script src="../../public/assets/js/changrprofile.js"></script>
+
+</html>

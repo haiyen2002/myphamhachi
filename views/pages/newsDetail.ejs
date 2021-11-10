@@ -1,0 +1,21 @@
+<div class="main_news">
+    <h3>TIN TỨC</h3>
+    <div class="container_news">
+        <div class="news-left">
+            <%- newsDetail.description %>
+        </div>
+        <div class="news-right">
+            <h4>Bài viết gần đây</h4>
+            <% news.forEach(ele =>{ %>
+            <a href="/news/<%= ele._id %>" class="news-right-item">
+                <div class="item-img">
+                    <img src="<%= ele.imgNews %>" alt="">
+                </div>
+                <div class="item-title">
+                    <h5><%= ele.title  %></h5>
+                </div>
+            </a>
+            <% }) %>
+        </div>
+    </div>
+</div>

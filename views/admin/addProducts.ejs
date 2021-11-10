@@ -1,0 +1,284 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <script
+        type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Bootstrap Core CSS -->
+    <link href="/public/assets/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <!-- Custom CSS -->
+    <link href="/public/assets/css/style.css" rel='stylesheet' type='text/css' />
+    <!-- Graph CSS -->
+    <link href="/public/assets/css/font-awesome.css" rel="stylesheet">
+    <!-- jQuery -->
+    <link href='//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet'
+        type='text/css'>
+    <!-- lined-icons -->
+    <link rel="stylesheet" href="/public/assets/css/icon-font.min.css" type='text/css' />
+    <!-- //lined-icons -->
+    <script src="/public/assets/js/jquery-1.10.2.min.js"></script>
+    <!--skycons-icons-->
+    <script src="/public/assets/js/skycons.js"></script>
+    <!--//skycons-icons-->
+</head>
+
+<body>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+
+            /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 30px;
+        }
+
+        .top-message {
+            z-index: 9999;
+            background: #e44f3d;
+            padding-top: 10px;
+            padding-bottom: 13px;
+            color: #fff;
+            font-weight: 400;
+            font-size: 16px;
+            position: fixed;
+            width: 100%;
+        }
+
+        .top-message-content {
+            position: relative;
+        }
+
+        .top-message-content .glyphicon {
+            margin-right: 7px;
+        }
+
+        .top-message-icon {
+            padding: 15px;
+            background: #e44f3d;
+            color: #fff;
+            cursor: pointer;
+            position: absolute;
+            top: -12px;
+            right: 15px;
+        }
+
+        button {
+            cursor: pointer;
+            background-color: #5de6de;
+            background-image: linear-gradient(315deg, #5de6de 0%, #b58ecc 74%);
+            border: none;
+            border-radius: 50%;
+            transition: 200ms;
+        }
+
+        button:hover {
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateX(-50%) translateY(-50%)
+            }
+
+            25% {
+                transform: translateX(-50%) translateY(-65%)
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(-50%)
+            }
+
+            75% {
+                transform: translateX(-50%) translateY(-35%)
+            }
+
+            100% {
+                transform: translateX(-50%) translateY(-50%)
+            }
+        }
+
+        button:focus {
+            outline: none;
+        }
+    </style>
+    <div class="mess_tb">
+
+    </div>
+    <div class="page-container">
+
+        <div style="background-color: white;" class="left-content">
+            <div class="inner-content">
+                <div class="outter-wp">
+                    <div class="sub-heard-part">
+                        <ol class="breadcrumb m-b-0">
+                            <h1 style="text-align: center; color: rgba(255, 60, 0, 0.918);margin-bottom: 30px;">Add
+                                product to list products</h1>
+                        </ol>
+                        <div class="container">
+                            <label for="fname">Name</label>
+                            <input type="text" id="fname" name="namePrd" placeholder="Your name..">
+
+                            <label for="lname">codeProduct</label>
+                            <input type="text" id="codeproduct" name="codeproduct" placeholder="Your codeproduct..">
+
+                            <label for="country">price</label>
+                            <input type="text" id="price" name="price" placeholder="Your price..">
+
+                            <label for="country">quantity</label>
+                            <input type="text" id="quantity" name="quantity" placeholder="Your quantity..">
+
+                            <label for="country">descriptionDetails</label>
+                            <input type="text" id="descriptionDetails" name="descriptionDetails"
+                                placeholder="Your descriptionDetails..">
+
+                            <label for="country">rate</label>
+                            <input type="text" id="rate" name="rate" placeholder="Your rate..">
+
+                            <label for="prd_key"> prd_key</label>
+                            <textarea id="prd_key" name="prd_key" placeholder="Write something.."
+                                style="height:200px"></textarea>
+
+
+
+                            <form class="listImg" action="/multiple-upload" method="POST" enctype="multipart/form-data">
+                                <p><input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)"
+                                        style="display: none;" multiple></p>
+                                <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+                                <p>
+                                <div id="output"></div>
+                                </p>
+                            </form>
+                            <button
+                                style="width: 100%; padding: 10px;background-color: chartreuse; border: none;outline: none;border-radius: 10px;"
+                                onclick="ClikSend()">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <p>@ Project Team k14-Nodemy</p>
+                </footer>
+            </div>
+        </div>
+        <%- include('../Components/menuadmin'); -%>
+    </div>
+
+
+</body>
+
+<%- include('../Components/scriptadmin'); -%>
+    <script>
+        var toggle = true;
+
+        $(".sidebar-icon").click(function () {
+            if (toggle) {
+                $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+                $("#menu span").css({ "position": "absolute" });
+            }
+            else {
+                $(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+                setTimeout(function () {
+                    $("#menu span").css({ "position": "relative" });
+                }, 400);
+            }
+
+            toggle = !toggle;
+        });
+    </script>
+    <script>
+
+        var loadFile = function (event) {
+            var image = $('#output');
+            for (let i = 0; i < event.target.files.length; i++) {
+                image.append(`<img src="${URL.createObjectURL(event.target.files[i])}" alt="" height="75px" style="margin-left:10px">`);
+            }
+
+        };
+    </script>
+    <script src="../../public/assets/js/Adminedit.js"></script>
+    <script>
+        if (window.screen.availWidth < 1920) {
+            try {
+                const resultbtn = $(".sidebar-icon")[0];
+                resultbtn.click();
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+    </script>
+
+
+</html>

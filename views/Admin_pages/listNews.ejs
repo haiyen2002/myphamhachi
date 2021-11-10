@@ -1,0 +1,35 @@
+<div class="details">
+    <div class="rencentOrder">
+      <div class="cardHeader">
+        <h2>List News</h2>
+        <a href="#" class="btn">View All</a>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <td>STT</td>
+            <td>Title</td>
+            <td>Content</td>
+            <td>DateSubmit</td>
+            <td>Fix</td>
+            <td>Delete</td>
+          </tr>
+        </thead>
+        <tbody>
+          <% news.forEach((ele, index) => { %>
+          <tr>
+            <td><%= index + 1 %></td>
+            <td><%= ele.title %> </td>
+            <td><%= ele.content %></td>
+            <td><%= ele.dateSubmit.toLocaleDateString() %></td>
+            <td><a href="#<%= ele._id %>" class="btn_fix"  onclick="editNews(`<%= ele._id %>`)">edit</a></td>
+            <td><a href="#<%= ele._id %>"  class="btn_delete"  onclick="deleteNews(`<%= ele._id %>`)">Delete</a></td>
+  
+          </tr>
+  
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

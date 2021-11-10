@@ -1,0 +1,442 @@
+#main {
+  width: 100%;
+}
+
+.slider-top {
+  z-index: -1;
+}
+
+.owl-prev {
+  margin-left: 20px;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 8px 16px;
+  border-radius: 50%;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.6s ease;
+  user-select: none;
+  border: 1px solid white;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: #006885;
+  border: none;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 0.3s;
+  animation-name: fade;
+  animation-duration: 0.3s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.main-banner {
+  position: relative;
+  z-index: 1;
+}
+
+.main-banner__image {
+  display: flex;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 8px;
+  margin-top: -60px;
+  background-color: white;
+}
+
+.main-banner__image img {
+  display: block;
+  width: 100%;
+}
+
+.main-banner__image a {
+  display: block;
+  flex: 1;
+  position: relative;
+  width: 100%;
+}
+
+.main-banner__image a:hover .main-banner__card {
+  opacity: 0.4;
+}
+
+.main-banner__image a:hover .main-banner-hover {
+  display: flex;
+}
+
+.main-banner-hover {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  display: none;
+}
+
+.main-banner-hover_text {
+  text-align: center;
+  width: 80%;
+}
+
+.main-banner-hover_text p:first-child,
+.main-banner-hover_text h3 {
+  color: #006885;
+}
+
+.main-banner-hover_text p:nth-child(3) {
+  color: #777;
+}
+
+.main-banner__card {
+  padding: 8px;
+}
+
+.main-banner__contact {
+  max-width: 1230px;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 50px;
+  flex-wrap: wrap;
+}
+
+.main-banner__contact___card {
+  flex: 1;
+  padding: 0 15px 30px;
+}
+
+.main-banner__contact___card a {
+  display: flex;
+  text-decoration: none;
+}
+
+.main-banner__contact___card a:hover .icon-box-text p {
+  color: black;
+}
+
+.main-banner__contact___card .icon-box-image img {
+  width: 40px;
+}
+
+.main-banner__contact___card .icon-box-text {
+  margin-left: 15px;
+}
+
+.icon-box-text h3 {
+  color: #006885;
+}
+
+.icon-box-text p {
+  color: #777;
+}
+
+.line-devide {
+  max-width: 1230px;
+  margin: 20px auto;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.section {
+  max-width: 1230px;
+  margin: 0 auto;
+}
+
+.section-head {
+  text-align: center;
+  color: #006885;
+  padding: 50px 0 0;
+}
+
+.section-title {
+  margin-bottom: 17px;
+}
+
+.sub-title {
+  margin-bottom: 20px;
+}
+
+.line {
+  width: 150px;
+  height: 2px;
+  background-color: #006885;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.section-list-product {
+  padding-top: 16px;
+  display: none ;
+}
+
+.section-list-product.active {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-product-popular ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.nav-product-popular ul li {
+  margin: 20px 20px 20px 0;
+  list-style: none;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.nav-product-popular ul li:hover {
+  border-color: #006885;
+}
+
+.nav-product-popular ul li.active {
+  border-color: #006885;
+}
+
+.nav-product-popular ul li.active a {
+  color: #006885;
+}
+
+.nav-product-popular ul li a {
+  padding: 8px 24px;
+  display: inline-block;
+  text-decoration: none;
+  color: #7d7d85;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.nav-product-popular ul li a:hover {
+  color: #006885;
+  cursor: pointer;
+}
+
+.main-content_banner {
+  display: flex;
+  margin: 40px 0;
+  justify-content: center;
+}
+
+.main-content_banner img {
+  display: block;
+  width: 100%;
+}
+
+.owl-carousel {
+  position: relative;
+}
+
+.owl-carousel:hover .owl-nav span {
+  display: inline-block;
+}
+
+.owl-nav.disabled {
+  display: block !important;
+}
+
+.owl-nav span {
+  padding: 0px 14px;
+  border-radius: 50%;
+  border: 1px solid #777;
+  vertical-align: middle;
+  color: #777;
+  margin: 0;
+  display: none;
+}
+
+.owl-prev {
+  position: absolute;
+  top: 36%;
+}
+
+.owl-next {
+  position: absolute;
+  top: 36%;
+  right: 0;
+  margin-right: 20px;
+}
+
+.owl-prev span:hover {
+  background-color: #006885;
+  color: #fff;
+}
+
+.owl-prev span {
+  font-size: 25px;
+  color: #777;
+}
+
+.owl-next span {
+  font-size: 28px;
+  margin-right: -10px;
+  color: #777;
+}
+
+.owl-next span:hover {
+  background-color: #006885;
+  color: #fff;
+}
+
+.product-card_item {
+  margin: 10px;
+}
+
+.product-card_item:hover {
+  box-shadow: 0px 0px 10px #ddd;
+  z-index: 10;
+}
+
+.product-card_item:hover a {
+  color: #555;
+}
+
+.owl-carousel a {
+  text-decoration: none;
+  color: #006885;
+}
+
+.box-card {
+  padding: 0 15px 30px;
+}
+
+.news-card:hover {
+  box-shadow: 0px 0px 10px #ddd;
+}
+
+.card-images {
+  position: relative;
+  overflow: hidden;
+  padding-top: 100%;
+}
+
+.card-images img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-text {
+  padding: 10px 18px 20px;
+}
+
+.card-text_title h3 {
+  color: #555;
+  font-size: 17px;
+}
+
+.card-text_date,
+.card-description {
+  color: #777;
+}
+
+.card-text_date {
+  font-size: 12px;
+}
+
+.card-description {
+  font-size: 15px;
+}
+
+.news-card .card-line {
+  height: 2px;
+  background-color: #ddd;
+  width: 40px;
+  margin: 8px 0;
+}
+
+.main-devide {
+  height: 60px;
+  background-color: #ddd;
+}
+
+/* responsive mainhome */
+@media (max-width: 849px) {
+  .section-list-product.active {
+    width: 100%;
+    justify-content: center;
+  }
+  .product-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 549px) {
+  .main-banner .main-banner__image {
+    display: block !important;
+    margin-top: -20px;
+  }
+
+  .product-card_item {
+    width: 100% !important;
+  }
+
+  .main-banner__image a {
+    width: 98%;
+    margin: 0 auto;
+  }
+  .main-banner__image img {
+    width: 100%;
+  }
+
+  .main-banner__contact___card {
+    flex: none;
+    width: 90%;
+  }
+  .main-banner__contact___card .icon-box-image {
+    padding: 22px 0;
+  }
+
+  .main-banner__contact___card .icon-box-image img {
+    width: 30px;
+  }
+
+  .main-banner__contact {
+    justify-content: center;
+  }
+
+  .main-content_banner {
+    flex-wrap: wrap;
+  }
+}

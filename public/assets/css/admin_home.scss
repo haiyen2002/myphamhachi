@@ -1,0 +1,165 @@
+.details {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 20px;
+    padding-top: 0;
+    gap: 20px;
+    @media screen and (max-width: 992px) {
+      display: flex;
+      flex-direction: column;
+    }
+    .rencentOrder {
+      position: relative;
+      min-height: 500px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      @media screen and (max-width: 480px) {
+        overflow-x: auto;
+      }
+      .cardHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        h2 {
+          font-weight: bold;
+        }
+        .btn {
+          background: linear-gradient(90deg, rgba(73, 138, 155, 0.6), rgba(211, 85, 194, 0.6) );
+          color: #fff;
+          padding: 5px;
+          text-decoration: none;
+          border-radius: 5px;
+        }
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 10px;
+        @media screen and (max-width: 480px) {
+          width: 550px !important;
+        }
+        thead {
+          tr {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            td {
+              font-weight: 600;
+              padding: 10px 5px;
+              font-size: 15px;
+              &:last-child {
+                text-align: right;
+              }
+              &:nth-child(2) {
+                text-align: right;
+              }
+              &:nth-child(3) {
+                text-align: right;
+              }
+            }
+          }
+        }
+        tbody {
+          tr {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  
+            &:hover {
+              background:  linear-gradient(90deg, rgba(73, 138, 155, 0.6), rgba(211, 85, 194, 0.6) );
+              color: #fff;
+            }
+            &:last-child {
+              border-bottom: none;
+            }
+            td {
+              padding: 10px 5px;
+              font-size: 15px;
+              &:last-child {
+                text-align: right;
+              }
+              &:nth-child(2) {
+                text-align: right;
+              }
+              &:nth-child(3) {
+                text-align: right;
+              }
+              .status {
+                color: #fff;
+                font-weight: 300;
+                border-radius: 4px;
+                padding: 4px;
+                letter-spacing: 2px;
+                font-size: 14px;
+              }
+              .compelete {
+                background: #4cd137;
+              }
+              .cancel {
+                background: #e74c3c;
+              }
+              .pending {
+                background: #f9ca3f;
+              }
+              .shipping {
+                background: #03a9f4;
+              }
+            }
+          }
+        }
+      }
+    }
+    .rencentCustomers {
+      min-height: 500px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      .cardHeader {
+        display: flex;
+        justify-content: space-between;
+        h2 {
+          font-weight: bold;
+        }
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 10px;
+        tbody {
+          tr {
+            &:hover {
+              background: linear-gradient(90deg, rgba(73, 138, 155, 0.6), rgba(211, 85, 194, 0.6) );
+              color: #fff;
+            }
+            &:hover h4,
+            &:hover span {
+              color: #fff;
+            }
+            td {
+              padding: 10px 5px;
+              .img_members {
+                width: 40px;
+                height: 40px;
+                .img_member {
+                  width: 40px;
+                  height: 40px;
+                  border-radius: 50%;
+                }
+              }
+              h4 {
+                color: #303030;
+                font-size: 14px;
+  
+                span {
+                  color: #777;
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  

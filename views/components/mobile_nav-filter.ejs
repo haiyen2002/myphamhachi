@@ -1,0 +1,126 @@
+<!-- MODAL-MOBILE -->
+
+<div class="modal-nav-mobile-filter">
+    <div class="modal-mobile-close">
+      <button class="btn-mobile-close" >
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="modal-mobile-filter">
+      <div class="container-mobile-filter">
+        <ul class="nav-mobile-filter">
+          <li class="nav-mobile-search">
+            <div class="search-mobile-filter">
+              <input
+                id="search-mobile-input-filter"
+                type="text"
+                placeholder="Tìm kiếm"
+              />
+              <span class="search-mobile-icon-filter">
+                <i class="fas fa-search"></i>
+              </span>
+            </div>
+          </li>
+         <div class="mobile-box-filter">
+            <li class="nav-mobile-item mobile-item-filter">
+                <div class="nav-item">
+                    <h4 class="title">Thể loại</h4>
+                    <form action="">
+                      <div class="filter-item">
+                        <input
+                          type="radio"
+                          name="category"
+                          id="all"
+                          value=""
+                          class="filter-checkbox"
+                          checked
+                        />
+                        <label for="">All</label>
+                      </div>
+                      <% var distinct=[] %> <% types.forEach(type=> { %> <%
+                      distinct.push(type.split(",")[0]) %> <% }) %> <% var
+                      uniques=distinct.map(item=> item).filter((value, index, self) =>
+                      self.indexOf(value) === index) %> <% uniques.forEach(unique => { %>
+                      <div class="filter-item">
+                        <input
+                          type="radio"
+                          name="category"
+                          id=""
+                          value="<%= unique %>"
+                          class="filter-checkbox"
+                        />
+                        <label for=""><%= unique %></label>
+                      </div>
+                      <% }) %>
+                    </form>
+                </div>
+              </li>
+              <li class="nav-mobile-item mobile-item-filter">
+                <div class="nav-item">
+                    <h4 class="title">Giá</h4>
+                    <div class="price-filter">
+                      <div class="filter-item">
+                        <input
+                          type="radio"
+                          min="0"
+                          max="99999"
+                          name="price"
+                          id="vl1"
+                          class="price-checkbox"
+                        />
+                        <label for="vl1">Dưới 100.000</label>
+                      </div>
+                      <div class="filter-item">
+                        <input
+                          type="radio"
+                          min="100000"
+                          max="499999"
+                          name="price"
+                          id="vl2"
+                          class="price-checkbox"
+                        />
+                        <label for="vl2">Từ 100.000 đến 500.000</label>
+                      </div>
+                      <div class="filter-item">
+                        <input
+                          type="radio"
+                          min="500000"
+                          max="999999"
+                          name="price"
+                          id="vl3"
+                          class="price-checkbox"
+                        />
+                        <label for="vl3">Từ 500.000 đến 1.000.000</label>
+                      </div>
+                      <div class="filter-item">
+                        <input
+                          type="radio"
+                          min="1000000"
+                          max="9999999"
+                          name="price"
+                          id=""
+                          class="price-checkbox"
+                        />
+                        <label for="">Trên 1.000.000</label>
+                      </div>
+                    </div>
+                   
+                </div>
+              </li>
+              <li class="nav-mobile-item mobile-item-filter">
+                <h4 class="title">Thương hiệu</h4>
+                <div class="filter-item">
+                  <input type="checkbox" name="" id="" />
+                  <label for="">HACHI</label>
+                </div>
+              </li>
+         </div>
+          <li class="nav-mobile-login">
+            <button class="mobile-login">Đăng nhập</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!-- MODAL-MOBILE-END -->

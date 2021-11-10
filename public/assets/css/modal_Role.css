@@ -1,0 +1,91 @@
+.modal_Role {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.modal_Role .modal_roleBox {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 200px;
+  background: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .modal_Role .modal_roleBox {
+    width: 60%;
+  }
+}
+
+.modal_Role .modal_roleBox .modalRole_close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.modal_Role .modal_roleBox .header_modalRole {
+  padding: 10px;
+  width: 100%;
+}
+
+.modal_Role .modal_roleBox .body_modalRole {
+  width: 100%;
+}
+
+.modal_Role .modal_roleBox .body_modalRole .select_Role {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.modal_Role .modal_roleBox .footer_modalRole {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+}
+
+.modal_Role .modal_roleBox .footer_modalRole .change_Role {
+  padding: 5px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background: #4cd137;
+  font-size: 18px;
+}
+
+.modal_Role .modal_roleBox .footer_modalRole .not_change {
+  padding: 5px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background: #03a9f4;
+  font-size: 18px;
+}
+/*# sourceMappingURL=modal_Role.css.map */
