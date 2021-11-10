@@ -558,3 +558,10 @@
   .to-add{
       display: none;
   }
+
+  .required-login {
+    padding: 8px 32px;
+    border: none;
+    background: #166987;
+    color: #fff;
+  }

@@ -96,3 +96,9 @@ $(".owl-carousel").owlCarousel({
     },
   },
 });
+
+function loginRequired(){
+  if(confirm('Vui lòng đăng nhập!')){
+    window.location.href='/login'
+  }
+}

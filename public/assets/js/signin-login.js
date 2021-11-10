@@ -192,6 +192,8 @@ function checklogin() {
         //   } else {
         //     // $(".pb-modalreglog-submit")[0].click();
         //     console.log(100);
+      }else{
+        $('.prd-detail-add').append('<button onclick="loginRequired()" class="required-login"><i class="fas fa-cart-plus"></i> Mua</button>')
       }
     })
     .catch((err) => {
